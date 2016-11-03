@@ -1,0 +1,636 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="blog,markdown," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="利用 GitHub+Hexo+NexT主题 搭建你的个人博客为什么要搭建自己的博客如果你需要有一个创作环境——无论是作为个人文集还是产品展示主页，而你又：
+
+忍受不了博客服务网站纷乱无序、不讲道理的广告
+忍受不了博客服务网站提供的粗糙排版格式
+忍受不了博客服务网站长而难记的域名，标识度、个性度不够
+
+那么你有两个选择，一个是微信公众号，另一个是就是参考本文为自己搭建一个个人博客。
+GitHub P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用 GitHub+Hexo+NexT 搭建你的个人博客">
+<meta property="og:url" content="http://yoursite.com/2016/11/02/利用 GitHub+Hexo+NexT 搭建你的个人博客/index.html">
+<meta property="og:site_name" content="Patrick's Blog">
+<meta property="og:description" content="利用 GitHub+Hexo+NexT主题 搭建你的个人博客为什么要搭建自己的博客如果你需要有一个创作环境——无论是作为个人文集还是产品展示主页，而你又：
+
+忍受不了博客服务网站纷乱无序、不讲道理的广告
+忍受不了博客服务网站提供的粗糙排版格式
+忍受不了博客服务网站长而难记的域名，标识度、个性度不够
+
+那么你有两个选择，一个是微信公众号，另一个是就是参考本文为自己搭建一个个人博客。
+GitHub P">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79jw1f9e3vp4673j30n403qmxo.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79jw1f9e6utc1p5j30m80fi76e.jpg">
+<meta property="og:updated_time" content="2016-11-03T01:44:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用 GitHub+Hexo+NexT 搭建你的个人博客">
+<meta name="twitter:description" content="利用 GitHub+Hexo+NexT主题 搭建你的个人博客为什么要搭建自己的博客如果你需要有一个创作环境——无论是作为个人文集还是产品展示主页，而你又：
+
+忍受不了博客服务网站纷乱无序、不讲道理的广告
+忍受不了博客服务网站提供的粗糙排版格式
+忍受不了博客服务网站长而难记的域名，标识度、个性度不够
+
+那么你有两个选择，一个是微信公众号，另一个是就是参考本文为自己搭建一个个人博客。
+GitHub P">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/006tNc79jw1f9e3vp4673j30n403qmxo.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/02/利用 GitHub+Hexo+NexT 搭建你的个人博客/"/>
+
+
+  <title> 利用 GitHub+Hexo+NexT 搭建你的个人博客 | Patrick's Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Patrick's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Share is the best way to learn.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            日程
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                利用 GitHub+Hexo+NexT 搭建你的个人博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-02T15:38:13+08:00" content="2016-11-02">
+              2016-11-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="利用-GitHub-Hexo-NexT主题-搭建你的个人博客"><a href="#利用-GitHub-Hexo-NexT主题-搭建你的个人博客" class="headerlink" title="利用 GitHub+Hexo+NexT主题 搭建你的个人博客"></a>利用 GitHub+Hexo+NexT主题 搭建你的个人博客</h1><h2 id="为什么要搭建自己的博客"><a href="#为什么要搭建自己的博客" class="headerlink" title="为什么要搭建自己的博客"></a>为什么要搭建自己的博客</h2><p>如果你需要有一个创作环境——无论是作为个人文集还是产品展示主页，而你又：</p>
+<ol>
+<li>忍受不了博客服务网站纷乱无序、不讲道理的广告</li>
+<li>忍受不了博客服务网站提供的粗糙排版格式</li>
+<li>忍受不了博客服务网站长而难记的域名，标识度、个性度不够</li>
+</ol>
+<p>那么你有两个选择，一个是微信公众号，另一个是就是参考本文为自己搭建一个个人博客。</p>
+<h2 id="GitHub-Pages-设置"><a href="#GitHub-Pages-设置" class="headerlink" title="GitHub Pages 设置"></a>GitHub Pages 设置</h2><p>首先要在 <a href="https://github.com" target="_blank" rel="external">GitHub</a> 里注册账号，用户名+Email+密码三段式注册，简单明快。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79jw1f9e3vp4673j30n403qmxo.jpg" alt=""></p>
+<p>注册后登陆你的账号，点击右上角的➕，选择 New Repository，并在 Repository Name 一栏里填入「你的用户名.github.io」，如果你不知道用户名是什么，就是 Owner 字段下面的那段文字。见上图，例如我的用户名是 patricorgi，Repository Name 就是 patricorgi.github.io 。之后点击页面下方的 Create Repository 绿色按钮，这样 GitHub Pages 的准备就做完了。一个 GitHub 账号只能创建一个这样的主页。</p>
+<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><h3 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h3 id="什么是-Markdown-语言？"><a href="#什么是-Markdown-语言？" class="headerlink" title="什么是 Markdown 语言？"></a>什么是 Markdown 语言？</h3><p>Markdown 语言易读易写，妈妈再也不用纠结我的文章排版问题了，只需要花两三分种学习一下基本语法，你就可以写出排版精致的文章。Markdown 请看<a href="http://sspai.com/25137" target="_blank" rel="external">这篇文章</a>中「Markdown 语法的简要规则」部分。</p>
+<p>在安装 Hexo 之前，还需要先确保电脑中已安装 <a href="https://nodejs.org" target="_blank" rel="external">Node.js</a> 和 <a href="https://git-scm.com" target="_blank" rel="external">Git</a>，然后只要在终端中执行一条命令即可完成 Hexo 的安装</p>
+<p><code>npm install -g hexo-cli</code></p>
+<p>有些 macOS 用户可能会在这一步遇到问题，那么请安装 Xcode 8.1 并进入 Xcode  8.1 -> Preference -> Location -> 选择 Command Line Tools，问题应该能解决。</p>
+<p>至此 Hexo 已经安装在你的电脑上。</p>
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><p>在终端里<code>cd</code>到你用来建站的路径下，建好之后一般就不移动了，所以要选个风水宝地哦。然后执行下面的命令：<br>    hexo init blogname<br>    cd blogname<br>    npm install<br>其中<code>blogname</code>是用来存放你个人站点内容的文件夹名称，包括 Hexo 博客的框架文件、主题文件、博文资源等等——我们就称之为「站点文件夹」或「站点根目录」把。</p>
+<h2 id="将-Hexo-站点与-GitHub-Pages-关联"><a href="#将-Hexo-站点与-GitHub-Pages-关联" class="headerlink" title="将 Hexo 站点与 GitHub Pages 关联"></a>将 Hexo 站点与 GitHub Pages 关联</h2><p>用<code>vim</code>打开站点根目录下的「站点配置文件」<code>_config.yml</code>，找到<code>deploy</code>和<code>type</code>字段。删除这两行，然后加入以下四行：</p>
+<pre><code>deploy:
+type: git #注意以下三行前面都有一个 Tab 的缩进
+repo: https://github.com/patricorgi/patricorgi.github.io.git
+branch: master
+</code></pre><p>这里<code>repo:</code>后的网址对应于你的 GitHub Pages 提交代码的 git 地址，一般来说是<code>https://github.com/你的用户名/你的用户名.github.io.git</code>，这里的「你的用户名」与 GitHub Pages 设置里的「你的用户名」一样。比如我的用户名是patricorgi。</p>
+<p>保存「站点配置文件」，然后在站点文件夹下使用<code>hexo s</code>命令测试一下网站是否配置成功，如果成功应该会提示<code>Hexo is running at http://localhost:4000/. Press Ctrl+C to stop</code>，这时候在浏览器中打开<code>localhost:4000</code>站点，如果能够正常显示页面（见下图），则表示建站成功。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79jw1f9e6utc1p5j30m80fi76e.jpg" alt=""></p>
+<p>你可以在「站点配置文件」中靠前的部分看到这几行</p>
+<pre><code>title: # 冒号后面输入你的博客名称
+subtitle: # 副标题
+description: # 对博客的一段文字描述
+author: # 作者，也就是你的名字
+language: zh-Hans # 这一行如果不是这样就改成这样，这样一来就是中文界面
+timezone: #在这一行不用管 
+</code></pre><h2 id="发布网页"><a href="#发布网页" class="headerlink" title="发布网页"></a>发布网页</h2><p>因为 Hexo 是静态博客，所以我们必须进行「发布」操作才能更新博客。何为静态？按笔者的理解就是，你无法直接在网站中更改内容，你的每一次修改，都需要在你的电脑里「发布」后，才能更新到博客中去，哪怕只是修改一个句号也必须重新「发布」。</p>
+<p>发布网页的命令只有以下三行：</p>
+<pre><code>hexo clean # 清理缓存，这句不执行也可
+hexo g # 或 hexo generate 生成网页
+hexo d # 或 hexo deploy 发布网页
+</code></pre><h2 id="更改-NexT-主题"><a href="#更改-NexT-主题" class="headerlink" title="更改 NexT 主题"></a>更改 NexT 主题</h2><p>上面你看到的站点页面是 Hexo 自带的 Landscape 主题，如果要更改为 NexT 主题，你可以在<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT 官网</a>查看安装流程。</p>
+<p>配置 NexT 主题之后，要对站点进行生成和发布操作才能更新你的博客。</p>
+<h2 id="创建新博文"><a href="#创建新博文" class="headerlink" title="创建新博文"></a>创建新博文</h2><p>建站之后有默认的一篇博文「Hello World」，里面详述了如何创建新博文。</p>
+<p>除了利用<code>hexo new post NAME</code>的命令之外，你还可以直接在「站点根目录」中的<code>source/_posts</code>文件夹中直接创建 Markdown 文件，不过要在文件开头加上这么几行：</p>
+<pre><code>---
+title: 利用 GitHub+Hexo+NexT 搭建你的个人博客
+date: 2016-11-2 15:3824
+tags: 
+- blog
+- markdown
+---
+</code></pre><p>以设置博文的标题、日期、标签，否则你的博文只会显示为「未命名」。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，你已经拥有自己的网站啦。如果你觉得域名中存在 github.io，还不够个性。你还可以尝试绑定自己购买的域名，看<a href="http://jingyan.baidu.com/article/3c343ff70fb6e60d3779632f.html" target="_blank" rel="external">这篇文章</a>就够了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/blog/" rel="tag">#blog</a>
+          
+            <a href="/tags/markdown/" rel="tag">#markdown</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/02/使用 Vim + Terminal 学习基础 Python 语言/" rel="next" title="使用 Vim + Terminal 学习基础 Python 语言">
+                <i class="fa fa-chevron-left"></i> 使用 Vim + Terminal 学习基础 Python 语言
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Patrick Wu" />
+          <p class="site-author-name" itemprop="name">Patrick Wu</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#利用-GitHub-Hexo-NexT主题-搭建你的个人博客"><span class="nav-number">1.</span> <span class="nav-text">利用 GitHub+Hexo+NexT主题 搭建你的个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要搭建自己的博客"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要搭建自己的博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Pages-设置"><span class="nav-number">1.2.</span> <span class="nav-text">GitHub Pages 设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-Hexo？"><span class="nav-number">1.3.1.</span> <span class="nav-text">什么是 Hexo？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-Markdown-语言？"><span class="nav-number">1.3.2.</span> <span class="nav-text">什么是 Markdown 语言？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建站"><span class="nav-number">1.4.</span> <span class="nav-text">建站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将-Hexo-站点与-GitHub-Pages-关联"><span class="nav-number">1.5.</span> <span class="nav-text">将 Hexo 站点与 GitHub Pages 关联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布网页"><span class="nav-number">1.6.</span> <span class="nav-text">发布网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改-NexT-主题"><span class="nav-number">1.7.</span> <span class="nav-text">更改 NexT 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建新博文"><span class="nav-number">1.8.</span> <span class="nav-text">创建新博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">1.9.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Patrick Wu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

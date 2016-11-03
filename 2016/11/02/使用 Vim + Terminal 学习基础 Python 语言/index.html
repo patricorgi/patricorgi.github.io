@@ -1,0 +1,622 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="macOS,vim,terminal,python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="使用 Vim + Terminal 学习基础 Python 语言前言这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：
+
+macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。
+将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Vim + Terminal 学习基础 Python 语言">
+<meta property="og:url" content="http://yoursite.com/2016/11/02/使用 Vim + Terminal 学习基础 Python 语言/index.html">
+<meta property="og:site_name" content="Patrick's Blog">
+<meta property="og:description" content="使用 Vim + Terminal 学习基础 Python 语言前言这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：
+
+macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。
+将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1f9dtic8382j30rs0fa0uk.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79jw1f9dsrr9ppug30dc06eb29.gif">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1f9drxbgyq0j30q004wjs5.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1f9drwhegpyj30py05wq3x.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1f9brc50sfaj304w04wdfu.jpg">
+<meta property="og:updated_time" content="2016-11-02T09:14:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Vim + Terminal 学习基础 Python 语言">
+<meta name="twitter:description" content="使用 Vim + Terminal 学习基础 Python 语言前言这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：
+
+macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。
+将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1f9dtic8382j30rs0fa0uk.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/02/使用 Vim + Terminal 学习基础 Python 语言/"/>
+
+
+  <title> 使用 Vim + Terminal 学习基础 Python 语言 | Patrick's Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Patrick's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Share is the best way to learn.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            日程
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用 Vim + Terminal 学习基础 Python 语言
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-02T13:55:24+08:00" content="2016-11-02">
+              2016-11-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9dtic8382j30rs0fa0uk.jpg" alt=""></p>
+<h1 id="使用-Vim-Terminal-学习基础-Python-语言"><a href="#使用-Vim-Terminal-学习基础-Python-语言" class="headerlink" title="使用 Vim + Terminal 学习基础 Python 语言"></a>使用 Vim + Terminal 学习基础 Python 语言</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：</p>
+<ol>
+<li>macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。</li>
+<li>将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的缺陷，说白了就是只能输出无法输入。比如说我用 Python 编了一个小程序，第一个部分就是需要用户输入一个字符串，Xcode 表示一脸懵逼。</li>
+</ol>
+<p>综上，小巧精致的 Vim + Terminal 无疑是在 macOS 甚至其他 Linux 系统上进行 Python 学习的最优方案。</p>
+<p>然后直接抛出我的学习资料。其实就是这么一个<a href="http://codingpy.com/article/vim-and-python-match-in-heaven/" target="_blank" rel="external">帖子</a>。按照里面的步骤一步步操作，可以完成几乎所有的配置，让你有个舒适 Python 学习环境。只在下文分享两个我在配置过程中遇到的问题和解决方案，如果你也遇到了同样的问题，可作为参考。</p>
+<h2 id="利用-Vundle-安装-YouCompleteMe"><a href="#利用-Vundle-安装-YouCompleteMe" class="headerlink" title="利用 Vundle 安装 YouCompleteMe"></a>利用 Vundle 安装 YouCompleteMe</h2><p><img src="http://ww4.sinaimg.cn/large/006tNc79jw1f9dsrr9ppug30dc06eb29.gif" alt=""></p>
+<p>我卡在安装可以自动补全 Python 语法的 Vim 插件 YouCompleteMe（以下简称YCM）。我利用 Vundle 安装 YCM 的时候 Processing 了好久。</p>
+<p>其实这里不要急躁，虽说只是个插件，但 YCM 却有很大的体积，所以要下载很久。这里只有耐心等待，或者换一个好一点的网络环境。</p>
+<p>什么？你不知道 Vundle 是啥？那么请看<a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="external">这里</a>。</p>
+<p>YCM 安装终于结束，但其实只是将 YCM 下载到了<code>.vim/bundle/</code>的目录下了而已，我们还需要进行编译。编译过程也很简单，只需两条命令：</p>
+<pre><code>cd ~/.vim/bundle/YouCompleteMe #进入YCM的目录
+./install.sh #执行安装脚本，这里使用 ./install.py 也行
+</code></pre><p>如果你还经常接触到 C 语言环境，那么你可能还需要 clang 的补全，那么上面的第二条语句应该改成</p>
+<pre><code>./install.sh --clang-completer
+</code></pre><p>然而这里我报了错，提示说</p>
+<pre><code>You have not specified which libclang to use. You have several options:\n
+1. Set PATH_TO_LLVM_ROOT to a path to the root of a LLVM+Clang binary 
+distribution. You can download such a binary distro from llvm.org. This 
+is the recommended approach.\n
+2. Set USE_SYSTEM_LIBCLANG to ON; this makes YCM search for the system 
+version of libclang.\n
+3. Set EXTERNAL_LIBCLANG_PATH to a path to whatever 
+libclang.[so|dylib|dll] you wish to use.\n
+You HAVE to pick one option. See the docs for more information.
+</code></pre><p>对，还需要 C 语言库，需要到到<a href="http://llvm.org/releases/download.html" target="_blank" rel="external">clang官网</a>下载，得到的是 .tar.xz 格式的双层压缩文件 clang+llvm-3.9.0-x86_64-apple-darwin.tar.xz（目前最新版本是 3.9.0，你下载的时候就不一定了），.xz 无法直接解压，需要到终端去利用<code>unxz</code>命令解压，然而<code>unxz</code>命令我的电脑里神TM的没有。我尝试了一下 <code>brew install xz</code>，没想到 brew 安装器的源里竟然有 xz，省了我不少事情（相比于macOS 下利用<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">brew</a>管理器安装套件，其他 linux 系统下应该是 apt-get 吧）。之后利用<code>unxz</code>成功解压，后缀名变成 tar，这时候直接用 macOS 自带的「归档实用工具」解压即可得到文件夹 clang+llvm-3.9.0-x86_64-apple-darwin。</p>
+<p>这样我们可以重新回到 YCM 的编译上了。</p>
+<p>再次从终端进入 YCM 目录<br><code>cd ~/.vim/bundle/YouCompleteMe</code><br>然后在执行安装命令前加上 clang 库的路径，命令为<br><code>PATH_TO_LLVM_ROOT=~/Downloads/clang+llvm-3.9.0-x86_64-apple-darwin ./install.sh --clang-completer</code><br>最后提示编译成功<br>注意：这里我将源包文件夹放到了<code>~/Downloads</code> 目录下</p>
+<h2 id="bpython"><a href="#bpython" class="headerlink" title="bpython"></a>bpython</h2><p>其实 macOS 自带的 IDLE 可以进行 python 的学习，并且有语法高亮的功能，但是我没搞清楚它能否像终端一样方便地读写文件，于是我就放弃了。在终端中执行<code>python</code>命令也可以进入 python shell，跟 IDLE 一毛一样，但是就是没有了语法高亮，真是蓝瘦。所以这里要介绍 bpython，它可以说是终端上的「IDEL shell」，哈哈哈，不仅支持<strong>语法高亮</strong>还支持<strong>自动补全</strong>（这里打住一下，之前 YCM 说的也是自动补全，但人家是 Vim 编辑器上的，与终端内执行命令的自动补全是两码事）。与 python 命令不同的是，它前头多了个 B（废话</p>
+<p>贴两张图看效果</p>
+<ul>
+<li>普通python shell：<br><img src="http://ww2.sinaimg.cn/large/006tNc79jw1f9drxbgyq0j30q004wjs5.jpg" alt=""></li>
+<li>装 Bpython shell：<br><img src="http://ww1.sinaimg.cn/large/006tNc79jw1f9drwhegpyj30py05wq3x.jpg" alt=""></li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们完成了 Vim + Terminal 的 Python 学习环境设置<br><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9brc50sfaj304w04wdfu.jpg" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/macOS/" rel="tag">#macOS</a>
+          
+            <a href="/tags/vim/" rel="tag">#vim</a>
+          
+            <a href="/tags/terminal/" rel="tag">#terminal</a>
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/31/炸酱面简明教程/" rel="next" title="炸酱面简明教程">
+                <i class="fa fa-chevron-left"></i> 炸酱面简明教程
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/02/利用 GitHub+Hexo+NexT 搭建你的个人博客/" rel="prev" title="利用 GitHub+Hexo+NexT 搭建你的个人博客">
+                利用 GitHub+Hexo+NexT 搭建你的个人博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Patrick Wu" />
+          <p class="site-author-name" itemprop="name">Patrick Wu</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-Vim-Terminal-学习基础-Python-语言"><span class="nav-number">1.</span> <span class="nav-text">使用 Vim + Terminal 学习基础 Python 语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-Vundle-安装-YouCompleteMe"><span class="nav-number">1.2.</span> <span class="nav-text">利用 Vundle 安装 YouCompleteMe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bpython"><span class="nav-number">1.3.</span> <span class="nav-text">bpython</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">1.4.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Patrick Wu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
