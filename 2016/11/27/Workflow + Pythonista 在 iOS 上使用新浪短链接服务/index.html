@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://patricorgi.github.io/2016/11/27/Workflow%20+%20Pythonista%20%E5%9C%A8%20iOS%20%E4%B8%8A%E4%BD%BF%E7%94%A8%E6%96%B0%E6%B5%AA%E7%9F%AD%E9%93%BE%E6%8E%A5%E6%9C%8D%E5%8A%A1/index.html">
 <meta property="og:site_name" content="Patrick&#39;s Blog">
 <meta property="og:description" content="用 Workflow + Pythonista 在 iOS 上使用新浪短链接服务 前言短链接就是用简短的链接来替代冗长的网址，使它更有利于分享，我在 macOS 使用名为 Shorten URL 的 alfredworkflow 来缩短长链接。  那么 iOS 上又该如何实现短链接呢？首先想到的方案就是利用 iOS 上著名的效率神器 Workflow 来实现。 Workflow 的 Gallery">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006y8lVajw1fa6ilr4uvcj30rg0asq3u.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006y8lVajw1fa6gfabdndj30to0ouq6g.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006y8lVajw1fa6je6avoej30ku191ad4.jpg">
@@ -49,7 +49,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -93,7 +93,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -107,7 +107,6 @@
       <h1 class="site-title">Patrick's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Share is the best way to learn.</p>
   </div>
 
   <div class="site-nav-right">
@@ -123,12 +122,12 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -158,13 +157,13 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/11/27/Workflow%20+%20Pythonista%20%E5%9C%A8%20iOS%20%E4%B8%8A%E4%BD%BF%E7%94%A8%E6%96%B0%E6%B5%AA%E7%9F%AD%E9%93%BE%E6%8E%A5%E6%9C%8D%E5%8A%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="P. Wu">
-      <meta itemprop="description" content="Share is the best way to learn.">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -180,16 +179,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="Created: 2016-11-27 02:17:00" itemprop="dateCreated datePublished" datetime="2016-11-27T02:17:00-05:00">2016-11-27</time>
+              <time title="创建时间：2016-11-27 02:17:00" itemprop="dateCreated datePublished" datetime="2016-11-27T02:17:00-05:00">2016-11-27</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-12-24 19:06:11" itemprop="dateModified" datetime="2020-12-24T19:06:11-05:00">2020-12-24</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-24 19:06:11" itemprop="dateModified" datetime="2020-12-24T19:06:11-05:00">2020-12-24</time>
               </span>
 
           
@@ -327,10 +326,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -343,7 +342,7 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">P. Wu</p>
-  <div class="site-description" itemprop="description">Share is the best way to learn.</div>
+  <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -351,12 +350,12 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">13</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
@@ -388,7 +387,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">P. Wu</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
         
