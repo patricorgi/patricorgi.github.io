@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="这可能是 Mac 上最佳视频格式转换和压制方案  HandBrake: Open Source Video Transcoder  对于很多视频编辑者来说，Mac 系统是不可或缺的神兵利器。即使是对普通用户而已，我们也有影音娱乐以及偶尔的上传视频需求，这一般会涉及到以下两个问题：  视频压制 视频格式转换  视频压制视频从拍摄到上传到网站一般会经过这样的过程：视频采集，视频剪辑，视频压制，上传。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这可能是 Mac 上最佳视频格式转换和压制方案">
+<meta property="og:url" content="https://patricorgi.github.io/2016/11/12/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%20Mac%20%E4%B8%8A%E6%9C%80%E4%BD%B3%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E5%8E%8B%E5%88%B6%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="Patrick&#39;s Blog">
+<meta property="og:description" content="这可能是 Mac 上最佳视频格式转换和压制方案  HandBrake: Open Source Video Transcoder  对于很多视频编辑者来说，Mac 系统是不可或缺的神兵利器。即使是对普通用户而已，我们也有影音娱乐以及偶尔的上传视频需求，这一般会涉及到以下两个问题：  视频压制 视频格式转换  视频压制视频从拍摄到上传到网站一般会经过这样的过程：视频采集，视频剪辑，视频压制，上传。">
+<meta property="og:locale">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/801b780ajw1f9qkmzyc7kj21100iejti.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1f9qc5frof5j30dw07uwep.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1f9qc5wb6j9j30rs0jw77z.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1f9qgo055jzj30rs07idhf.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/801b780ajw1f9qjk9m8auj21220xy11u.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/801b780ajw1f9qiu6x1gbj20g40a3aaf.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1f9qgo0a1w6j30rs0cdgnq.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1f9qfqk770jj30m80aqgn2.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/801b780ajw1f9qk9w54k1j207404z74h.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79jw1f9qhws2qxuj30jg0q4tc8.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/801b780ajw1f9qimviihij20rs0c7wgu.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/801b780ajw1f9qipwvrqdj20ss0dwdi3.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/801b780ajw1f9qj7r47mij20jg0q5wic.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1f9brc50sfaj304w04wdfu.jpg">
+<meta property="article:published_time" content="2016-11-12T13:11:55.000Z">
+<meta property="article:modified_time" content="2020-12-24T23:49:46.843Z">
+<meta property="article:author" content="P. Wu">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="软件">
+<meta property="article:tag" content="视频处理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/801b780ajw1f9qkmzyc7kj21100iejti.jpg">
+
+<link rel="canonical" href="https://patricorgi.github.io/2016/11/12/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%20Mac%20%E4%B8%8A%E6%9C%80%E4%BD%B3%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E5%8E%8B%E5%88%B6%E6%96%B9%E6%A1%88/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>这可能是 Mac 上最佳视频格式转换和压制方案 | Patrick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Patrick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share is the best way to learn.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/11/12/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%20Mac%20%E4%B8%8A%E6%9C%80%E4%BD%B3%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E5%8E%8B%E5%88%B6%E6%96%B9%E6%A1%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="Share is the best way to learn.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          这可能是 Mac 上最佳视频格式转换和压制方案
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-12 08:11:55" itemprop="dateCreated datePublished" datetime="2016-11-12T08:11:55-05:00">2016-11-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-24 18:49:46" itemprop="dateModified" datetime="2020-12-24T18:49:46-05:00">2020-12-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="这可能是-Mac-上最佳视频格式转换和压制方案"><a href="#这可能是-Mac-上最佳视频格式转换和压制方案" class="headerlink" title="这可能是 Mac 上最佳视频格式转换和压制方案"></a>这可能是 Mac 上最佳视频格式转换和压制方案</h1><p><img src="http://ww2.sinaimg.cn/large/801b780ajw1f9qkmzyc7kj21100iejti.jpg" alt="hb"></p>
+<blockquote>
+<p>HandBrake: Open Source Video Transcoder</p>
+</blockquote>
+<p>对于很多视频编辑者来说，Mac 系统是不可或缺的神兵利器。即使是对普通用户而已，我们也有影音娱乐以及偶尔的上传视频需求，这一般会涉及到以下两个问题：</p>
+<ol>
+<li>视频压制</li>
+<li>视频格式转换</li>
+</ol>
+<h2 id="视频压制"><a href="#视频压制" class="headerlink" title="视频压制"></a>视频压制</h2><p>视频从拍摄到上传到网站一般会经过这样的过程：视频采集，视频剪辑，视频压制，上传。</p>
+<p>我们通过手机、相机采集到的视频的码率远超网页视频的码率。举个具体的例子，iOS 设备采集的视频码率大约在 50 Mbps，相比而言 Bilibili 弹幕网对超清视频的要求上限是 1.8 Mbps，一旦超过这个码率，视频会被官方重新压制（官方压制后的清晰度惨不忍睹）。所以我们必须自力更生压制出适用于 B 站上传的「高质量」视频——<strong>码率无限趋近于 1.8 Mbps 却又不超过 1.8 Mbps，以保证视频原有的分辨率和帧率</strong>。</p>
+<blockquote>
+<p>码率即每秒钟传输的信息量，例如一部动画每秒钟为 30 张画面(30 帧)，每张画面大小为 1 Mb，那么该动画视频的码率即为 30 Mbps，低码率的视频具有相对来说更低的视频文件体积大小。</p>
+</blockquote>
+<h2 id="视频格式转换"><a href="#视频格式转换" class="headerlink" title="视频格式转换"></a>视频格式转换</h2><p>为什么要统一 Mac 系统下的视频格式？在 Windows 下随手下载一个XX影音就能解决几乎所有类型的视频的解码问题。在 Mac 下也是一样的，但是 Mac 系统有个好玩的功能——快速预览（QuickLook）——在任何文件上敲击「空格」键，可以快速预览文件内容。比如，可以快速预览 PDF 文件每一页的内容，而不需要打开 PDF 阅读器，快速播放音乐文件而不需要打开音乐播放器，快速预览图片自不必说以及快速预览视频。但尴尬是，目前快速预览视频仅限于 mp4 和 mov 格式。因此我们要进行格式转换，使电脑中常用的视频文件格式统一为 mp4 和 mov。</p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79jw1f9qc5frof5j30dw07uwep.jpg" alt="rm"></p>
+<p>上图为无法预览的 rm 格式文件</p>
+<h2 id="Mac-上压制视频的常用方案"><a href="#Mac-上压制视频的常用方案" class="headerlink" title="Mac 上压制视频的常用方案"></a>Mac 上压制视频的常用方案</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/imovie/id408981434?mt=12&ls=1&v0=www-cn-mac-imovie-app-imovie">iMovie</a>（免费）</li>
+<li><a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/final-cut-pro/id424389933?mt=12">Final Cut Pro</a>（￥1998.00）</li>
+</ul>
+<p>上述两款软件均可以进行高质量的视频压制和格式转换，但这里所谓的「高质量」并不是我们想要的「高质量」，而是指压制出来的视频码率仍然很高，超出了 1.8 Mbps 的限制。此外，它们具有 GB 级别的体积，作为 Mac 软件来说实在太大了，就 Final Cut Pro 而言还有很多普通用户用不到的专业功能，完全就是多余。</p>
+<h2 id="Handbrake"><a href="#Handbrake" class="headerlink" title="Handbrake"></a>Handbrake</h2><p>相较之下 Handbrake 就显得小巧精悍了，它仅有不到 30 MB 的体积。先来看一下它的主界面，不要马上就被它复杂的交互界面吓到，只要记住下面列出的几点即可。即便记不住也没关系，根据下面会介绍例子自己练习一次也就熟悉了。</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9qc5wb6j9j30rs0jw77z.jpg" alt="handbrake1"></p>
+<ul>
+<li>源文件路径：显示你目前正在处理的文件路径，导入源文件可以通过右上角的「Source」按钮选择文件，也可以直接拖动源文件到 Handbrake 界面下导入</li>
+<li>目标文件路径：压制/转换后视频的存储路径</li>
+<li>格式：目前有 mp4 和 mkv 两种格式</li>
+<li>编码设置：这部分是重点，在下面将会举例说明</li>
+<li>画幅设置：这部分是重点，在下面将会举例说明</li>
+<li>预览：完成编码设置之后可以通过这里看最终效果，可以预览静帧画面质量以及视频中任意部分 15 秒内动态画面质量</li>
+<li>首选项：除了预设的一些模板之外还可以存储用户自定义的「编码设置+画幅设置」</li>
+</ul>
+<p>下面按之前提到的两个问题说明它的使用方法。</p>
+<h3 id="1-视频格式转换"><a href="#1-视频格式转换" class="headerlink" title="1. 视频格式转换"></a>1. 视频格式转换</h3><p>把之前无法快速预览的「[国产经典动画.十二生肖的故事].01.rm」文件拖入 Handbrake，然后目标文件设置为桌面，得到</p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79jw1f9qgo055jzj30rs07idhf.jpg" alt="source"></p>
+<p>进行简单的视频格式转换时，由于我们没有对视频体积、码率的要求，所以只要使用默认设置进行转换即可，直接点击左上的「Start」，等待转换完成就可以了。</p>
+<p>转换后的十二生肖动画在 Mac 下可以利用 QuickLook 直接预览，视频预览还可以拖动进度条，占用的系统资源也比较少：</p>
+<p><img src="http://ww1.sinaimg.cn/large/801b780ajw1f9qjk9m8auj21220xy11u.jpg" alt="12shengxiao"></p>
+<p>经笔者测试，在保证相同视频质量的同时，除 mkv 格式的视频之外，其他格式的视频在转换为 mp4 格式后，体积都减小了，统一视频格式的同时还可以省下更多的空间，</p>
+<p><img src="http://ww1.sinaimg.cn/large/801b780ajw1f9qiu6x1gbj20g40a3aaf.jpg" alt="wst"></p>
+<p>如果选择「Add to Queue」，还可以用同一套设置去批量转换视频格式，读者可以自己研究一下。</p>
+<p>下面对默认设置里重要的两部分加以说明。</p>
+<h4 id="编码设置"><a href="#编码设置" class="headerlink" title="编码设置"></a>编码设置</h4><p><img src="http://ww2.sinaimg.cn/large/006tNc79jw1f9qgo0a1w6j30rs0cdgnq.jpg" alt="encoding"></p>
+<ul>
+<li>Quality<ul>
+<li>Constant Quality: RF 20 这里的 RF 值越低视频质量越高，RF 值在 22 以内就已经具有很高的质量，所以我们按照默认值 20 转换格式即可。</li>
+<li>Average Bitrate (kbps): 未选择（这在下一部分说）</li>
+</ul>
+</li>
+<li>Video Codec: H.264(x264) 选择此项无可厚非，这是主流视频编码器，具有小体积高质量的优点</li>
+<li>Encoder Options<ul>
+<li>Preset: medium(笔者认为此项是视频压制的精髓，这一项决定了编码的速率，同时也决定了编码的精细程度，速率越快 Handbrake 的压制越马虎，效果越差，速率越慢，Handbrake 的压制越仔细，越能得到高质量低码率的视频)</li>
+<li>Tune: none(out of film, animation, and so on)</li>
+</ul>
+</li>
+</ul>
+<h4 id="画幅设置-Picture-Settings"><a href="#画幅设置-Picture-Settings" class="headerlink" title="画幅设置(Picture Settings)"></a>画幅设置(Picture Settings)</h4><p><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9qfqk770jj30m80aqgn2.jpg" alt="picture1"></p>
+<ul>
+<li>画幅设置中的 Cropping 裁边模式默认为 Automatic 自动裁边，这会起到去除黑边的作用，但有时候我们不需要去除黑边，只要改选为 Custom，然后把下面四个数值都设置为 0 即可</li>
+<li>Anamorphic 默认下是 Loose，意思就是让视频的分辨率能够自适应为下面数值为「Modulus」倍数的分辨率（比如说 1920×1080，其中 1920 是 2 的倍数），对于 1921.6×1080.9 这样奇怪的分辨率（仍然是 16:9 比例）在 Loose 设置下能自适应为 2 倍数分辨率，即1921.6×1080.9（非 2 倍数分辨率）→ 1920×1080（2 倍数分辨率），可以看出它是会牺牲部分分辨率的，不过 Modulus 倍分辨率将具有更高的压制效率。</li>
+<li>Filter 里可以设置 decomb 部分反交错和 deinterlace 完全反交错。分别适合部分交错视频和完全交错视频的修正。交错可以简单理解为重影，就像下面这个样子。<br><img src="http://ww4.sinaimg.cn/large/801b780ajw1f9qk9w54k1j207404z74h.jpg" alt="interlace"></li>
+</ul>
+<h3 id="2-视频压制"><a href="#2-视频压制" class="headerlink" title="2. 视频压制"></a>2. 视频压制</h3><p>接下来介绍的是 B 站 60 帧超清视频压制的实例。不过首先推荐各位 App Store 一款查看视频文件信息的免费软件 <a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/media-info/id550128418?mt=12">Media-Info</a>。它可以帮助你查看视频文件的所有信息，包括文件大小、时长、码率、编码格式、分辨率、帧率等等。</p>
+<p>先用 Media-Info 查看一下将要压制的视频信息</p>
+<img src="http://ww4.sinaimg.cn/large/006tNc79jw1f9qhws2qxuj30jg0q4tc8.jpg" width = "500" alt="ow" align=center />
+
+<ul>
+<li>Bit rate(码率): 20352 kbps(= 20.352 Mbps)</li>
+<li>Width: 1600</li>
+<li>Height: 900</li>
+<li>*interlace(比较少见，但如果出现了，就需要在画幅设置中的Filter里把 decomb 改为 deinterlace，否则视频压制后可能出现重影现象)<br>（对视频压制而言，重要的也就这几个啦）</li>
+</ul>
+<p>这是我录制的一个 1600×900 分辨率、60 FPS 的游戏视频，它的码率实在是太高了，直接上传到B站上，肯定会被官方压得不成样子，而且帧率是肯定会被降到 30 FPS，极其影响观感。</p>
+<p>我们在默认设置上进行修改，设置如下：</p>
+<h4 id="编码设置-1"><a href="#编码设置-1" class="headerlink" title="编码设置"></a>编码设置</h4><ul>
+<li>Quality：一定要改成 Average Bitrate (kbps) <strong>自定义</strong>平均码率并勾选「2-pass encoding」，而不是 Constant Quality 玄学码率。因为是平均码率，我们保险起见设置为 1650 kbps，保证视频每一部分的码率都不超过 1800 kbps。「2-pass encoding」即二次压制，对一次视频进行两次压制，好比铺设马路，压路机在铺好的水泥上压过一回之后回头再压一回，使得第一次压制不平整的区域更加平整。如果担心太慢也可以再勾选「Turbo first pass」，这样会使第一次压制快速进行。</li>
+<li>Preset：设置为 veryslow 或者 placebo。从 20352 kbps 疯狂压制到 1650 kbps 必然会损失大量的视频信息，所以我们必须让 Handbrake 仔仔细细地压制，使视频中结构简单的大色块画面成分尽量压小，结构细致的画面成分尽量保留，挤出视频这块海绵里所有的水分，但是又不破坏海绵中的纤维结构。</li>
+<li>Tune: 这个可以不改，默认为 none。如果是游戏或动画视频，笔者建议改为 animation。</li>
+</ul>
+<p>设置结果如下</p>
+<p><img src="http://ww3.sinaimg.cn/large/801b780ajw1f9qimviihij20rs0c7wgu.jpg" alt="encoding1"></p>
+<h4 id="画幅设置"><a href="#画幅设置" class="headerlink" title="画幅设置"></a>画幅设置</h4><p>因为是上传到 B 站的视频，那么其比例为 16:9，因为视频原本就是 16:9 的格式，如果 automatic 有自动裁边我们就要将它改选为 custom，但是这里 automatic 的数值均为0，所以画幅设置里不需要修改任何设置。</p>
+<p><img src="http://ww4.sinaimg.cn/large/801b780ajw1f9qipwvrqdj20ss0dwdi3.jpg" alt="picture2"></p>
+<p>设置结束之后，我们点击「Start」开始压制，这段仅30秒的视频竟然压制了5分钟，可想而知一部90分钟以上的电影在这套设置下需要压制多久了。不过回报也是值得的，视频大小从 87 MB 被压缩到了 8.4 MB。</p>
+<img src="http://ww4.sinaimg.cn/large/801b780ajw1f9qj7r47mij20jg0q5wic.jpg" width = "500" alt="compressed" align=center />
+
+
+<p>这样的视频文件可以保证其 1600×900 分辨率，60 帧的质量，上传到B站后而不会损失任何画质。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>存储下自己常用的压制配置到 Presets 里，流程就可以简化为拖入源文件 - 选择首选项 - Start！</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9brc50sfaj304w04wdfu.jpg" alt="done"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/macOS/" rel="tag"># macOS</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
+              <a href="/tags/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/" rel="tag"># 视频处理</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/11/02/%E5%88%A9%E7%94%A8%20GitHub+Hexo+NexT%20%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="prev" title="利用 GitHub+Hexo+NexT 搭建你的个人博客">
+      <i class="fa fa-chevron-left"></i> 利用 GitHub+Hexo+NexT 搭建你的个人博客
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/11/18/%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BD%20.pkg%20%E5%92%8C%20.mpkg%20%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/" rel="next" title="彻底卸载 .pkg 和 .mpkg 软件的方法">
+      彻底卸载 .pkg 和 .mpkg 软件的方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF-Mac-%E4%B8%8A%E6%9C%80%E4%BD%B3%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E5%8E%8B%E5%88%B6%E6%96%B9%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">这可能是 Mac 上最佳视频格式转换和压制方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%8E%8B%E5%88%B6"><span class="nav-number">1.1.</span> <span class="nav-text">视频压制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.2.</span> <span class="nav-text">视频格式转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-%E4%B8%8A%E5%8E%8B%E5%88%B6%E8%A7%86%E9%A2%91%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%A1%88"><span class="nav-number">1.3.</span> <span class="nav-text">Mac 上压制视频的常用方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handbrake"><span class="nav-number">1.4.</span> <span class="nav-text">Handbrake</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 视频格式转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">编码设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%BB%E5%B9%85%E8%AE%BE%E7%BD%AE-Picture-Settings"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">画幅设置(Picture Settings)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%A7%86%E9%A2%91%E5%8E%8B%E5%88%B6"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 视频压制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E8%AE%BE%E7%BD%AE-1"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">编码设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%BB%E5%B9%85%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">画幅设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.5.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">P. Wu</p>
+  <div class="site-description" itemprop="description">Share is the best way to learn.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">P. Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

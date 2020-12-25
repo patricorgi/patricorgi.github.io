@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="iOS 使用技巧分享：即使是手机也能高效起来 北京时间9月8日苹果发布会后，想必许多人对 iPhone 7 已经有了深入的了解。不知从什么时候起，人们已经开始习惯于对苹果新品的聚焦，习惯于对新品的追捧和吐槽。可是对于伴随新 iPhone 而来的 iOS 10 系统又有多少人习惯了呢？本文将以 iOS 10 为背景，介绍能够提高手机使用效能的技巧。这些技巧都是笔者作为 iOS 爱好者，希望其他 iO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 使用技巧分享：即使是手机也能高效起来">
+<meta property="og:url" content="https://patricorgi.github.io/2016/04/24/iOS%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB:%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%89%8B%E6%9C%BA%E4%B9%9F%E8%83%BD%E9%AB%98%E6%95%88%E8%B5%B7%E6%9D%A5/index.html">
+<meta property="og:site_name" content="Patrick&#39;s Blog">
+<meta property="og:description" content="iOS 使用技巧分享：即使是手机也能高效起来 北京时间9月8日苹果发布会后，想必许多人对 iPhone 7 已经有了深入的了解。不知从什么时候起，人们已经开始习惯于对苹果新品的聚焦，习惯于对新品的追捧和吐槽。可是对于伴随新 iPhone 而来的 iOS 10 系统又有多少人习惯了呢？本文将以 iOS 10 为背景，介绍能够提高手机使用效能的技巧。这些技巧都是笔者作为 iOS 爱好者，希望其他 iO">
+<meta property="og:locale">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjerbmxfj211s0egt9d.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjer6wugj209o0am3zh.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/65e4f1e6jw1f9bjer4flsj20dc08fdh9.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/65e4f1e6jw1f9bjer36ymj216c11443r.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjequcrbj216c114dnj.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjeqnuoaj20m813i79p.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/65e4f1e6jw1f9bjeqhtbbj20m70fxjsj.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjeqhyl1g207t0dwe6w.gif">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjeq99x8j20hf0yyq4o.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/65e4f1e6jw1f9bjhvxmmuj21120wgwiq.jpg">
+<meta property="article:published_time" content="2016-04-24T06:56:42.000Z">
+<meta property="article:modified_time" content="2020-12-24T23:50:47.463Z">
+<meta property="article:author" content="P. Wu">
+<meta property="article:tag" content="iOS">
+<meta property="article:tag" content="效率">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjerbmxfj211s0egt9d.jpg">
+
+<link rel="canonical" href="https://patricorgi.github.io/2016/04/24/iOS%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB:%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%89%8B%E6%9C%BA%E4%B9%9F%E8%83%BD%E9%AB%98%E6%95%88%E8%B5%B7%E6%9D%A5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>iOS 使用技巧分享：即使是手机也能高效起来 | Patrick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Patrick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share is the best way to learn.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/04/24/iOS%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB:%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%89%8B%E6%9C%BA%E4%B9%9F%E8%83%BD%E9%AB%98%E6%95%88%E8%B5%B7%E6%9D%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="Share is the best way to learn.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          iOS 使用技巧分享：即使是手机也能高效起来
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-04-24 02:56:42" itemprop="dateCreated datePublished" datetime="2016-04-24T02:56:42-04:00">2016-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-24 18:50:47" itemprop="dateModified" datetime="2020-12-24T18:50:47-05:00">2020-12-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="iOS-使用技巧分享：即使是手机也能高效起来"><a href="#iOS-使用技巧分享：即使是手机也能高效起来" class="headerlink" title="iOS 使用技巧分享：即使是手机也能高效起来"></a>iOS 使用技巧分享：即使是手机也能高效起来</h2><p><img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjerbmxfj211s0egt9d.jpg" alt="ios10"></p>
+<p>北京时间9月8日苹果发布会后，想必许多人对 iPhone 7 已经有了深入的了解。不知从什么时候起，人们已经开始习惯于对苹果新品的聚焦，习惯于对新品的追捧和吐槽。可是对于伴随新 iPhone 而来的 iOS 10 系统又有多少人习惯了呢？本文将以 iOS 10 为背景，介绍能够提高手机使用效能的技巧。这些技巧都是笔者作为 iOS 爱好者，希望其他 iOS 使用者能够熟知和掌握的功能，希望大家可以参考一下。</p>
+<p>如果单说移动端的效率，对于触屏时代，我们的目标自然是「少点那么几下」！</p>
+<h1 id="全局-Spotlight-搜索"><a href="#全局-Spotlight-搜索" class="headerlink" title="全局 Spotlight 搜索"></a>全局 Spotlight 搜索</h1><p>系统级别的全局搜索，无论是对于 Win8 以上视窗系统的用户，还是 Mac 系统用户都不陌生（视窗系统下的快捷键是Win + Q，Mac系统下是 ⌃ + space）。<strong>不论何时何地</strong>，都能够呼出搜索框，直接进行硬盘文件、日历项、通讯录、天气、百度（Google）网页搜索，极大地提高了工作效率。</p>
+<p><img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjer6wugj209o0am3zh.jpg" alt="winq"></p>
+<p><img src="http://ww1.sinaimg.cn/large/65e4f1e6jw1f9bjer4flsj20dc08fdh9.jpg" alt="spotlightmac"></p>
+<p>现在 iOS 10 系统的 Spotlight 搜索也能做到这一点了。</p>
+<p>在以往版本的 iOS 中，Spotlight 只能在桌面使用，每次搜索都需要退回到桌面，这意味着使用成本的增加。在 iOS 10，Spotlight 终于进化为完全体。它被整合到了通知中心中，利用通知中心在任何界面都可以下拉的特点实现了 Spotlight 的全局使用。</p>
+<p>举个日常例子，假如你正在刷微博，看到博主推荐了一款好看的唇膏，想马上在淘宝中搜一下。以往的做法是：微博手机客户端→桌面→找到淘宝图标→手机淘宝→搜索唇膏。而利用 iOS 10 系统的 Spotlight 搜索，你可以直接在微博界面下拉通知中心，输入「tao」，点击出现的淘宝app图标，进入淘宝。节省下了退回到桌面再用肉眼查找淘宝图标这一过程。当然如果你是 iPhone 6s 以上机型，还能使用 3D Touch 对 Spotlight 的搜索结果进行操作。更为便捷的是，如果你在 Spotlight 设置中打开了 Siri 建议，系统会挑选出你最近使用较频繁的 App 显示在 Spotlight 下方的 Siri 建议卡片里（一次显示8个应用图标），这样对于常用 App 就不用每次都输入啦。</p>
+<p><img src="http://ww3.sinaimg.cn/large/65e4f1e6jw1f9bjer36ymj216c11443r.jpg" alt="spotlight1"></p>
+<p>Spotlight 搜索还支持通讯录、日历项、地图、App Store、网页搜索、App 内部搜索等，几乎涵盖了 iOS 系统内部的所有内容。当然，App 内部的搜索功能需要 App 本身支持才可以。比如，笔者就发现京东已经支持在 Spotlight 里直接搜索商品了；一些文件管理类应用也可以通过 Spotlight 搜索其内部文件，例如可以快速打开老师的课堂讲义 PDF 或是老板的报告文件 PPT 什么的。</p>
+<p><img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjequcrbj216c114dnj.jpg" alt="spotlight2"></p>
+<p>此外，活用 Spotlight 另一个间接的好处是，可以减少桌面上的图标数量了，绝大多数 App 都可以收进文件夹里，需要时利用 Spotlight 搜索调用即可，桌面变得简洁和美观，可以腾出更多的空间欣赏壁纸啦。因为 iOS 不能像 Android 那样定制桌面图标摆放，这也可算是一个折中的办法。</p>
+<p><img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjeqnuoaj20m813i79p.jpg" alt="desktop"></p>
+<h1 id="URL-Scheme-效率应用"><a href="#URL-Scheme-效率应用" class="headerlink" title="URL Scheme + 效率应用"></a>URL Scheme + 效率应用</h1><blockquote>
+<p>用原生 iOS 的人分两种，懂URL Scheme的和不懂的；前者是「魔法师」，后者是「麻瓜」。</p>
+</blockquote>
+<p>在<a href="sspai.com">少数派</a>看到过这么一句话，虽有着自命不凡的意味，却也有几分贴切。URL Scheme 无法否认是实现 iOS 系统效率化使用必不可少的「魔咒」。</p>
+<p>URL（Uniform Resoure Locator，即统一资源定位器）简单来说是<strong>符合某种命名规则的入口</strong>，是形如「xxx://」 的东西，比如我们经常看到的网址前缀「http://」可以认为是互联网地址的「入口」。按这种逻辑我们类比一下，对于微信（weixin）来说，「weixin://」就是微信的「入口」咯？答案是肯定的。不信的话，你可以打开Safari在地址栏里输入「weixin://」看是否会直接跳转到微信。</p>
+<p>URL Scheme 可用于补偿 iOS 沙盒机制带来的不便。出于安全考虑，iOS 限制了 App 之间的互动，这虽然保证了用户个人信息的安全，却降低了系统的灵活性和可定制性。人们常说的「越狱」其实就是打破这种沙盒机制的破解手段，但「越狱」破坏了 iOS 系统的安全性，在当今这个电子商务盛行的年代，破坏这种安全性是笔者很不提倡的。所以说 URL Scheme 成为了折中的方案，它在沙盒机制的框架下一定程度上实现了 App 之间的互动，其实现方法就好比向 App 开发者们提供「weixin://」这样的「入口」。</p>
+<p>利用这种「入口」，我们可以做很多事情。如果在 Safari 地址栏中输入「weixin://scanqrcode」我们可以直接打开微信扫一扫。这句 URL Scheme 后面的「scanqrcode」就是微信内的一个功能，是由微信 App 开发人员定义的功能字段，我们通过「weixin://」入口调用了这一功能。</p>
+<p>另一个例子是淘宝搜索，在 Safari 地址栏输入：”taobao://s.taobao.com/?q=”+”宝贝名称”，可以直接显示淘宝应用（不是网页版淘宝）的搜索结果哦。看到这里可能很多读者会觉得：每次都要输入这么一长串字符，反而降低效率了，不是吗？所以到这里我们就必须借助一些效率类 App 的帮忙了。例如「<a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/launch-center-pro-shortcut/id532016360?mt=8&ign-mpt=uo=4">Launch Center Pro</a>」和「<a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/id915249334?mt=8&ign-mpt=uo=4">Workflow</a>」，这两个 App 可谓是目前 iOS 系统下的效率神器，但由于篇幅问题不对这些应用具体介绍，读者可自行搜索一下这两个 App，相信你会打开新世界的大门。这里推荐一下另一个效率类 App，是由国人@钟颖 开发的「Pin」，它能很方便地将这些长 URL Scheme 封装成一个简单的按钮，并配合剪贴板进行 URL Scheme 输入。利用按键替代输入，可以很方便地使用 URL Scheme 来提高效率。</p>
+<p><img src="http://ww1.sinaimg.cn/large/65e4f1e6jw1f9bjeqhtbbj20m70fxjsj.jpg" alt="pin1"></p>
+<p><img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjeqhyl1g207t0dwe6w.gif" alt="pin2"></p>
+<p>你可以在 <a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/pin-jian-tie-ban-zeng-qiang/id1039643846?mt=8&uo=4&at=10lJSw">App Store</a> 里下载Pin，完全免费无内购。</p>
+<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><p>iOS 文件管理的不透明是很多人诟病的地方。但是，笔者这里要指出，iOS 奉行的是 App 主导的理念。系统只为 App 开发提供基础功能接口，包括：麦克风、摄像头、定位服务等等。系统本身不做多余的事情，而是把想象力都留给 App 开发者们了。<br>文件管理也属于 iOS 提供给 App 开发的接口之一。所以文件管理是需要特定 App 来实现的。笔者在此推荐 Documents，你可以通过它来存储任意格式的文件（无论是可识别的格式还是不可识别的）。可以说是 iOS 上最强大的资源管理器。</p>
+<p>Documents 本身支持下表中列出的所有格式文件，而不支持的格式，则可以通过 iOS 的分享卡片「在其他应用中打开」。</p>
+<p><img src="http://ww2.sinaimg.cn/large/65e4f1e6jw1f9bjeq99x8j20hf0yyq4o.jpg" alt="docu1"></p>
+<p>无论是通过下载地址取得的文件，还是通过 QQ、微信接收的文件，都可以利用 iOS 分享卡片导入 Documents 的存储空间中。相反，你也可以从 Documents 里共享文件到其他 App 中。</p>
+<p><img src="http://ww1.sinaimg.cn/large/65e4f1e6jw1f9bjhvxmmuj21120wgwiq.jpg" alt="docu2"></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>iOS 本身是很有灵性的系统，笔者希望用户们不要害怕接触新功能、新特性，一句「我只需要能打电话发短信聊扣扣上网就行了」而过，不知错过了多少美好。在这里说句题外话，坚守传统固然是好，但也容易陷入因循守旧的漩涡。相信本文的读者大多是充满朝气的年轻人，我们应当在遵循传统的同时，保有好奇心去探究新事物，才能为生活增加生命力，创造新的可能性。这种探索的心态，可以逐渐提高你的生活质量。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/iOS/" rel="tag"># iOS</a>
+              <a href="/tags/%E6%95%88%E7%8E%87/" rel="tag"># 效率</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/04/24/%E5%B0%86%20Atom%20%E9%85%8D%E7%BD%AE%E6%88%90%E4%B8%BA%E5%BC%BA%E5%A4%A7%E4%B8%94%E4%BC%98%E9%9B%85%E7%9A%84%20LaTeX%20%E7%BC%96%E8%BE%91%E5%99%A8/" rel="prev" title="将 Atom 配置成为强大且优雅的 LaTeX 编辑器">
+      <i class="fa fa-chevron-left"></i> 将 Atom 配置成为强大且优雅的 LaTeX 编辑器
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/10/31/%E7%82%B8%E9%85%B1%E9%9D%A2%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/" rel="next" title="炸酱面简明教程">
+      炸酱面简明教程 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB%EF%BC%9A%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%89%8B%E6%9C%BA%E4%B9%9F%E8%83%BD%E9%AB%98%E6%95%88%E8%B5%B7%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">iOS 使用技巧分享：即使是手机也能高效起来</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A8%E5%B1%80-Spotlight-%E6%90%9C%E7%B4%A2"><span class="nav-number"></span> <span class="nav-text">全局 Spotlight 搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#URL-Scheme-%E6%95%88%E7%8E%87%E5%BA%94%E7%94%A8"><span class="nav-number"></span> <span class="nav-text">URL Scheme + 效率应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-number"></span> <span class="nav-text">文件管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number"></span> <span class="nav-text">结语</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">P. Wu</p>
+  <div class="site-description" itemprop="description">Share is the best way to learn.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">P. Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

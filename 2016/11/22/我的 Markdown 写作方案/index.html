@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="我的 Markdown 写作方案前言今日著名的写作软件 iA Writer 放出了它的4.0版本。距离去年9月发布的3.0版本，不到15个月的时间。在后起之秀如 MWeb 和一直风头无两的 Ulysses 压力之下，咋看起来这样推进式的更新像是抢占市场份额一样。但实际上，4.0版本的更新却含金量十足。相比只有 macOS 版的 MWeb，iA Writer 还支持 iOS 系统，可以很轻松地在移动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的 Markdown 写作方案">
+<meta property="og:url" content="https://patricorgi.github.io/2016/11/22/%E6%88%91%E7%9A%84%20Markdown%20%E5%86%99%E4%BD%9C%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="Patrick&#39;s Blog">
+<meta property="og:description" content="我的 Markdown 写作方案前言今日著名的写作软件 iA Writer 放出了它的4.0版本。距离去年9月发布的3.0版本，不到15个月的时间。在后起之秀如 MWeb 和一直风头无两的 Ulysses 压力之下，咋看起来这样推进式的更新像是抢占市场份额一样。但实际上，4.0版本的更新却含金量十足。相比只有 macOS 版的 MWeb，iA Writer 还支持 iOS 系统，可以很轻松地在移动">
+<meta property="og:locale">
+<meta property="og:image" content="http://i.imgur.com/67YuVnf.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1fa1w847jxqj31kw0wxn52.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1fa147vx93cj31kw0znmy6.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1fa1z22ehcmj30ia082t9x.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1fa1wc9ode7j315i0x00ux.jpg">
+<meta property="article:published_time" content="2016-11-22T15:57:44.000Z">
+<meta property="article:modified_time" content="2020-12-25T00:04:46.153Z">
+<meta property="article:author" content="P. Wu">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://i.imgur.com/67YuVnf.jpg">
+
+<link rel="canonical" href="https://patricorgi.github.io/2016/11/22/%E6%88%91%E7%9A%84%20Markdown%20%E5%86%99%E4%BD%9C%E6%96%B9%E6%A1%88/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>我的 Markdown 写作方案 | Patrick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Patrick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share is the best way to learn.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/11/22/%E6%88%91%E7%9A%84%20Markdown%20%E5%86%99%E4%BD%9C%E6%96%B9%E6%A1%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="Share is the best way to learn.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我的 Markdown 写作方案
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-22 10:57:44" itemprop="dateCreated datePublished" datetime="2016-11-22T10:57:44-05:00">2016-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-24 19:04:46" itemprop="dateModified" datetime="2020-12-24T19:04:46-05:00">2020-12-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="我的-Markdown-写作方案"><a href="#我的-Markdown-写作方案" class="headerlink" title="我的 Markdown 写作方案"></a>我的 Markdown 写作方案</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今日著名的写作软件 <a target="_blank" rel="noopener" href="https://ia.net/writer">iA Writer</a> 放出了它的<a target="_blank" rel="noopener" href="https://player.vimeo.com/video/191969564?title=0&byline=0&portrait=0&color=00ADFB">4.0</a>版本。距离去年9月发布的3.0版本，不到15个月的时间。在后起之秀如 MWeb 和一直风头无两的 Ulysses 压力之下，咋看起来这样推进式的更新像是抢占市场份额一样。但实际上，4.0版本的更新却含金量十足。相比只有 macOS 版的 MWeb，iA Writer 还支持 iOS 系统，可以很轻松地在移动设备和桌面设备上共享文件，利用移动端随时随地记录灵感；与同样优雅清爽的 Ulysses 相比，iA Writer 又具有十分亲民的价格，macOS + iOS 两版同时购买也只有Ulysses 三分之一左右的价格。于是在 33% 的 Launch Discount 下，我马上入手了。</p>
+<h2 id="我的-Markdown-写作需求"><a href="#我的-Markdown-写作需求" class="headerlink" title="我的 Markdown 写作需求"></a>我的 Markdown 写作需求</h2><ul>
+<li>良好的写作环境</li>
+<li>多设备同步功能</li>
+<li>方便的资源管理</li>
+<li>LaTeX语法支持</li>
+</ul>
+<h3 id="先简单介绍一下-Markdown-语言"><a href="#先简单介绍一下-Markdown-语言" class="headerlink" title="先简单介绍一下 Markdown 语言"></a>先简单介绍一下 Markdown 语言</h3><p>Markdown 思维有点像是低配的 LaTeXLaTeX。与 Word 一类传统文本编辑工具的「所见即所得」特点不同，Markdown 语言则是轻量级的「标记语言」，输入的纯文本信息可经由特殊符号标记输出成为富文本信息。下面是一些简单的例子：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="bullet">-</span> 项目A</span><br><span class="line"><span class="bullet">-</span> 项目B</span><br><span class="line"><span class="bullet">-</span> 项目C</span><br><span class="line"><span class="bullet">	1.</span> 步骤1</span><br><span class="line"><span class="bullet">	2.</span> 步骤2</span><br><span class="line"><span class="bullet">	3.</span> 步骤3</span><br><span class="line"></span><br><span class="line">代码格式：<span class="code">`git clone https://github.com/iissnan/hexo-theme-next themes/next`</span> </span><br><span class="line"></span><br><span class="line">插入链接：[<span class="string">Patrick&#x27;s Blog</span>](<span class="link">patricorgi.github.io</span>)</span><br><span class="line"></span><br><span class="line">插入图片：![<span class="string">yantuanzi</span>](<span class="link">http://i.imgur.com/67YuVnf.jpg</span>)</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>经输出后，我们就可以得到这样的打印结果：</p>
+<hr>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><ul>
+<li>项目A</li>
+<li>项目B</li>
+<li>项目C<ol>
+<li>步骤1</li>
+<li>步骤2</li>
+<li>步骤3</li>
+</ol>
+</li>
+</ul>
+<p>代码格式：<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+<p>插入链接：[Patrick’s Blog](<a href="https://patricorgi.github.io/2016/11/22/%E6%88%91%E7%9A%84">https://patricorgi.github.io/2016/11/22/我的</a> Markdown 写作方案/patricorgi.github.io)</p>
+<p>插入图片：<a target="_blank" rel="noopener" href="http://i.imgur.com/67YuVnf.jpg"><img src="http://i.imgur.com/67YuVnf.jpg" alt="yantuanzi"></a></p>
+<hr>
+<p>除了轻量级的文本格式化输出，软件本身也是轻量级的，iA Writer 本身只有 12.4M 的体积，从各种意义上都能减小设备的负担。</p>
+<h2 id="良好的写作环境"><a href="#良好的写作环境" class="headerlink" title="良好的写作环境"></a>良好的写作环境</h2><p>良好的创作环境是必要的，就好比高中时候我们都会迫不及待地在新买的笔记本上记笔记一样，毫不夸张地说，这种新奇感可以很大程度上激发人的写作欲望。</p>
+<p><a target="_blank" rel="noopener" href="http://ww3.sinaimg.cn/large/006tNc79jw1fa1w847jxqj31kw0wxn52.jpg"><img src="http://ww3.sinaimg.cn/large/006tNc79jw1fa1w847jxqj31kw0wxn52.jpg" alt="img"></a></p>
+<p>我们可以先看看 MWeb，它的功能强大，预置了几乎所有 Markdown 语言的格式化按钮，用户不需要记忆和手动输入比较复杂的 Markdown 命令，就可以进行类似上面的链接和图片插入。它甚至还支持 LaTeXLaTeX 输入和即时预览，这也是我最初看好 MWeb 的原因。</p>
+<p>但于我，MWeb 的问题在于它复杂的界面，各式各样不能和谐统一的按钮，以及不能隐藏的标题栏。极简主义表示无法忍受，我更倾向于 iA Writer 或 Ulysses 那种纯白的界面，没错，它们的界面就是一片空白，就像新买的笔记本一般精致优雅，让你有马上在上面进行写作的欲望。</p>
+<p><a target="_blank" rel="noopener" href="http://ww2.sinaimg.cn/large/006tNc79jw1fa147vx93cj31kw0znmy6.jpg"><img src="http://ww2.sinaimg.cn/large/006tNc79jw1fa147vx93cj31kw0znmy6.jpg" alt="img"></a></p>
+<p>我当时向作者发了 Feedback 建议把 MWeb 奇怪的 LaTeX 预览字体改成正统的 Latin Modern Math。然后 MWeb 作者给我的说法「字体定制功能并不是给普通用户用的」，当时我就不开心了，你应该帮助用户解决才对，反过来说用户太「普通」，所以到现在这个问题仍然没有解决。</p>
+<p><a target="_blank" rel="noopener" href="http://ww2.sinaimg.cn/large/006tNc79jw1fa1z22ehcmj30ia082t9x.jpg"><img src="http://ww2.sinaimg.cn/large/006tNc79jw1fa1z22ehcmj30ia082t9x.jpg" alt="img"></a></p>
+<h2 id="多设备同步"><a href="#多设备同步" class="headerlink" title="多设备同步"></a>多设备同步</h2><p>iA Writer 和 Ulysses 都能利用 iCloud 进行多设备同步，还能支持 Dropbox 一类的云盘存储。所以可以随时随地写作、并方便上传手机图片。我们也不需要担心手机端的书写效率问题，因为 iA Writer for iOS 的键盘上内置了一排标记符号的按键，可以快捷输入这些标识符。不知 MWeb 什么时候才推出 iOS 版并实现多设备同步呢，如果这样的话我可能还会再考虑一下它呢。</p>
+<h2 id="文件管理系统"><a href="#文件管理系统" class="headerlink" title="文件管理系统"></a>文件管理系统</h2><p>或者说外部文档浏览功能，使用静态博客的读者可能会知道，所有的文章都是放在同一个文件夹下的，站点文件夹下有一定的层次结构，如果编辑器能自带树状资源管理器，那读写博客是十分方便的。</p>
+<h2 id="面包还是要的"><a href="#面包还是要的" class="headerlink" title="面包还是要的"></a>面包还是要的</h2><p>可有时候我还需要输入 LaTeX 公式，这该怎么办呢？方案有二：</p>
+<h3 id="方案一：使用-Typora"><a href="#方案一：使用-Typora" class="headerlink" title="方案一：使用 Typora"></a>方案一：使用 Typora</h3><p>Typora 是一款免费极简 Markdown 软件，原生支持了 LaTeX 公式的输入，</p>
+<p><a target="_blank" rel="noopener" href="http://ww2.sinaimg.cn/large/006tNc79jw1fa1wc9ode7j315i0x00ux.jpg"><img src="http://ww2.sinaimg.cn/large/006tNc79jw1fa1wc9ode7j315i0x00ux.jpg" alt="img"></a></p>
+<p>对我而言，公式书写的情况占了少数，所以偶尔用 Typora 替代 iA Writer 书写，或用它来检测 LaTeX 语法是否正确。</p>
+<p>Typora 像是一个带有 Markdown+LaTeX 功能的「记事本」，它没有同步功能和文件管理系统，否则它将会成为我唯一的 Markdown 编辑器。</p>
+<h3 id="方案二：将公式作为图片插入"><a href="#方案二：将公式作为图片插入" class="headerlink" title="方案二：将公式作为图片插入"></a>方案二：将公式作为图片插入</h3><p>如果 macOS 里安装了 MacTeX，那么一定会有个名为 LaTeXiT 的软件，这个软件专注于公式生产。你可以直接键入公式，然后「LaTeX iT！」就能生成公式，可以将其复制或保存为 png 在内的多种格式，然后我们把 png 图片插入 Markdown 文件里就可以啦。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/11/18/%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BD%20.pkg%20%E5%92%8C%20.mpkg%20%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/" rel="prev" title="彻底卸载 .pkg 和 .mpkg 软件的方法">
+      <i class="fa fa-chevron-left"></i> 彻底卸载 .pkg 和 .mpkg 软件的方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/11/27/Workflow%20+%20Pythonista%20%E5%9C%A8%20iOS%20%E4%B8%8A%E4%BD%BF%E7%94%A8%E6%96%B0%E6%B5%AA%E7%9F%AD%E9%93%BE%E6%8E%A5%E6%9C%8D%E5%8A%A1/" rel="next" title="Workflow + Pythonista 在 iOS 上使用新浪短链接服务">
+      Workflow + Pythonista 在 iOS 上使用新浪短链接服务 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E7%9A%84-Markdown-%E5%86%99%E4%BD%9C%E6%96%B9%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">我的 Markdown 写作方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84-Markdown-%E5%86%99%E4%BD%9C%E9%9C%80%E6%B1%82"><span class="nav-number">1.2.</span> <span class="nav-text">我的 Markdown 写作需求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B-Markdown-%E8%AF%AD%E8%A8%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">先简单介绍一下 Markdown 语言</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%AF%E5%A5%BD%E7%9A%84%E5%86%99%E4%BD%9C%E7%8E%AF%E5%A2%83"><span class="nav-number">2.2.</span> <span class="nav-text">良好的写作环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%90%8C%E6%AD%A5"><span class="nav-number">2.3.</span> <span class="nav-text">多设备同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.</span> <span class="nav-text">文件管理系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%8C%85%E8%BF%98%E6%98%AF%E8%A6%81%E7%9A%84"><span class="nav-number">2.5.</span> <span class="nav-text">面包还是要的</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8-Typora"><span class="nav-number">2.5.1.</span> <span class="nav-text">方案一：使用 Typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C%EF%BC%9A%E5%B0%86%E5%85%AC%E5%BC%8F%E4%BD%9C%E4%B8%BA%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="nav-number">2.5.2.</span> <span class="nav-text">方案二：将公式作为图片插入</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">P. Wu</p>
+  <div class="site-description" itemprop="description">Share is the best way to learn.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">P. Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

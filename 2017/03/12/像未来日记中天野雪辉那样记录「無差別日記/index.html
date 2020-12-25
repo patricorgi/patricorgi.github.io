@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="像未来日记中天野雪辉那样记录「無差別日記」其实这是一个小小的 LCP + Drafts + TextExpander 实例，因为微博上有人求方法，我就写一个正式的教程吧。 无差别日记需要用到的 App 有：  Launch Center Pro (LCP) Drafts 4 TextExpander 一个支持 URL Scheme 的笔记应用，比如 Day One（或 Evernote ）  我把">
+<meta property="og:type" content="article">
+<meta property="og:title" content="像未来日记中天野雪辉那样记录「無差別日記」">
+<meta property="og:url" content="https://patricorgi.github.io/2017/03/12/%E5%83%8F%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%AE%B0%E4%B8%AD%E5%A4%A9%E9%87%8E%E9%9B%AA%E8%BE%89%E9%82%A3%E6%A0%B7%E8%AE%B0%E5%BD%95%E3%80%8C%E7%84%A1%E5%B7%AE%E5%88%A5%E6%97%A5%E8%A8%98/index.html">
+<meta property="og:site_name" content="Patrick&#39;s Blog">
+<meta property="og:description" content="像未来日记中天野雪辉那样记录「無差別日記」其实这是一个小小的 LCP + Drafts + TextExpander 实例，因为微博上有人求方法，我就写一个正式的教程吧。 无差别日记需要用到的 App 有：  Launch Center Pro (LCP) Drafts 4 TextExpander 一个支持 URL Scheme 的笔记应用，比如 Day One（或 Evernote ）  我把">
+<meta property="og:locale">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk4xtr41pj318a0hcdj8.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk5ers58fj31e818gn4g.jpg">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNbRwgy1fdk60ihj1tj31kw0xkqc7.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fdk6gt28nij30x91n4dpq.jpg">
+<meta property="article:published_time" content="2017-03-12T13:46:24.000Z">
+<meta property="article:modified_time" content="2020-12-24T23:49:54.703Z">
+<meta property="article:author" content="P. Wu">
+<meta property="article:tag" content="iOS">
+<meta property="article:tag" content="软件">
+<meta property="article:tag" content="流水账">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk4xtr41pj318a0hcdj8.jpg">
+
+<link rel="canonical" href="https://patricorgi.github.io/2017/03/12/%E5%83%8F%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%AE%B0%E4%B8%AD%E5%A4%A9%E9%87%8E%E9%9B%AA%E8%BE%89%E9%82%A3%E6%A0%B7%E8%AE%B0%E5%BD%95%E3%80%8C%E7%84%A1%E5%B7%AE%E5%88%A5%E6%97%A5%E8%A8%98/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>像未来日记中天野雪辉那样记录「無差別日記」 | Patrick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Patrick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share is the best way to learn.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2017/03/12/%E5%83%8F%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%AE%B0%E4%B8%AD%E5%A4%A9%E9%87%8E%E9%9B%AA%E8%BE%89%E9%82%A3%E6%A0%B7%E8%AE%B0%E5%BD%95%E3%80%8C%E7%84%A1%E5%B7%AE%E5%88%A5%E6%97%A5%E8%A8%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="Share is the best way to learn.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          像未来日记中天野雪辉那样记录「無差別日記」
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-03-12 09:46:24" itemprop="dateCreated datePublished" datetime="2017-03-12T09:46:24-04:00">2017-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-24 18:49:54" itemprop="dateModified" datetime="2020-12-24T18:49:54-05:00">2020-12-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="像未来日记中天野雪辉那样记录「無差別日記」"><a href="#像未来日记中天野雪辉那样记录「無差別日記」" class="headerlink" title="像未来日记中天野雪辉那样记录「無差別日記」"></a>像未来日记中天野雪辉那样记录「無差別日記」</h1><p>其实这是一个小小的 LCP + Drafts + TextExpander 实例，因为微博上有人求方法，我就写一个正式的教程吧。</p>
+<p>无差别日记需要用到的 App 有：</p>
+<ul>
+<li>Launch Center Pro (LCP)</li>
+<li>Drafts 4</li>
+<li>TextExpander</li>
+<li>一个支持 URL Scheme 的笔记应用，比如 Day One（或 Evernote ）</li>
+</ul>
+<p>我把 Launch Center Pro 作为书写和提交「無差別日記」的入口，我设想你需要以天野雪辉那样丧心病狂的记录频率来记录周围发生的无差别事件，然后以「天」为单位提交一整天记录的内容到日记应用 Day One 中。所以一天下来的「無差別日記」记录流程基本上是这样的：  </p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk4xtr41pj318a0hcdj8.jpg"></p>
+<h2 id="记录無差別事件"><a href="#记录無差別事件" class="headerlink" title="记录無差別事件"></a>记录無差別事件</h2><p>Drafts 是作为暂存区的存在。我们要先钦定一条专门用于录入無差別事件的 Draft。首先需要取得 Draft 的 UUID 码，UUID 相当于 Draft 的身份证号码，只有通过它 LCP 才能直到你需要往哪一条 Draft 里录入信息。</p>
+<p>你可以运行 <a target="_blank" rel="noopener" href="http://drafts4-actions.agiletortoise.com/a/13V">Copy UUID</a> 这个 Action 来复制一条 Draft 的 UUID 码。</p>
+<p>之后我们需要利用 TextExpander 来生成时间信息，我用下面这个 TE Snippet 来生成当前时间，缩写为 ttime，在 LCP 中使用 <code>[textexpander:ttime]</code> tag 来使用它。</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk5ers58fj31e818gn4g.jpg"></p>
+<p>得到 UUID 和并在 TextExpander 里添加了时间 Snippet 之后，我们打开 LCP，先在设置中同步一下 TextExpander 的 Snippets。然后新建一个 Action，在 Action Composer 里搜索到 Drafts 4，然后选择 Append to Draft and Return 这个预置 Action，之后依次填入</p>
+<ul>
+<li>Name: 無差別日記</li>
+<li>UUID: 你复制到的 UUID</li>
+<li>Text:<code>[textexpander:ttime]</code> <code>[prompt: 無差別事件]</code> </li>
+<li>Action:</li>
+</ul>
+<h2 id="提交一整天记录的事件"><a href="#提交一整天记录的事件" class="headerlink" title="提交一整天记录的事件"></a>提交一整天记录的事件</h2><p>我在 Drafts 4 里创建了这样一个 Action：</p>
+<ul>
+<li><p>Step 1: 将 Draft 内容复制到剪贴板</p>
+</li>
+<li><p>Step 2: 利用一个脚本来清空当前 Draft 内容，脚本内容</p>
+<p>  // Script steps run short Javascripts<br>  // For documentation and examples, visit:<br>  // <a target="_blank" rel="noopener" href="http://help.agiletortoise.com/">http://help.agiletortoise.com</a></p>
+<p>  draft.content = “”;<br>  commit(draft);</p>
+</li>
+<li><p>Step 3: 用 Day One 提供的 URL Scheme 从剪贴板创建新日志</p>
+</li>
+</ul>
+<p><img src="https://ww4.sinaimg.cn/large/006tNbRwgy1fdk60ihj1tj31kw0xkqc7.jpg"></p>
+<p>然后将此 Draft Action 命名为「无差别日记」</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fdk6gt28nij30x91n4dpq.jpg"></p>
+<p>为了保证第二天能够继续使用这条被钦定的 Draft，我们必须要删除当天记录到 Draft 中的内容，所以需要清空它。</p>
+<p>于是在 LCP 中创建一个新的 Action，在 Action Composer 中使用 Drafts 4 预置的 Open Draft，然后填好以下三条 Option 即可</p>
+<ul>
+<li>Name: 提交無差別日記</li>
+<li>UUID: 你之前复制的那条 Draft 的 UUID</li>
+<li>Action: 无差别日记</li>
+</ul>
+<p>如果需要你还可以给这个 Action 加一个 Schedule，让它每天固定时间提醒你提交当天记录的内容。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>通过这两个 LCP Action 你可以方便地记录无差别事件，然后每天睡前提交到日记应用中就可以了。这样你就可以走上成神之路了，加油吧少年(ง •_•)ง</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/iOS/" rel="tag"># iOS</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
+              <a href="/tags/%E6%B5%81%E6%B0%B4%E8%B4%A6/" rel="tag"># 流水账</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/12/02/Snappy%EF%BC%9A%E5%8D%A1%E7%89%87%E5%BC%8F%E6%88%AA%E5%B1%8F%E5%B7%A5%E5%85%B7/" rel="prev" title="Snappy：卡片式截屏工具">
+      <i class="fa fa-chevron-left"></i> Snappy：卡片式截屏工具
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%83%8F%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%AE%B0%E4%B8%AD%E5%A4%A9%E9%87%8E%E9%9B%AA%E8%BE%89%E9%82%A3%E6%A0%B7%E8%AE%B0%E5%BD%95%E3%80%8C%E7%84%A1%E5%B7%AE%E5%88%A5%E6%97%A5%E8%A8%98%E3%80%8D"><span class="nav-number">1.</span> <span class="nav-text">像未来日记中天野雪辉那样记录「無差別日記」</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E7%84%A1%E5%B7%AE%E5%88%A5%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">记录無差別事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E4%B8%80%E6%95%B4%E5%A4%A9%E8%AE%B0%E5%BD%95%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">提交一整天记录的事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.3.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">P. Wu</p>
+  <div class="site-description" itemprop="description">Share is the best way to learn.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">P. Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

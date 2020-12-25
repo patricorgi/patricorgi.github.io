@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="简中求效：Markdown 遇上 LaTeX前言我是一个物理工作者，MS Word／WPS 什么的很早就扔掉了。LaTeX 才是我们的家常便饭。本科时候在课堂上我就喜欢拿着电脑做笔记。macOS 下只要下载一个 MacTeX，它自带 TeXShop，然后一切就都搞定了。 后来知道了 Markdown 语法，这样一个花 2 分钟就能学会的「标记语言」直接戳中我这样一个极简主义者的 G 点。与 LaT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简中求效：Markdown 遇上 LaTeX">
+<meta property="og:url" content="https://patricorgi.github.io/2016/11/30/%E7%AE%80%E4%B8%AD%E6%B1%82%E6%95%88%EF%BC%9AMarkdown%20%E9%81%87%E4%B8%8A%20LaTeX/index.html">
+<meta property="og:site_name" content="Patrick&#39;s Blog">
+<meta property="og:description" content="简中求效：Markdown 遇上 LaTeX前言我是一个物理工作者，MS Word／WPS 什么的很早就扔掉了。LaTeX 才是我们的家常便饭。本科时候在课堂上我就喜欢拿着电脑做笔记。macOS 下只要下载一个 MacTeX，它自带 TeXShop，然后一切就都搞定了。 后来知道了 Markdown 语法，这样一个花 2 分钟就能学会的「标记语言」直接戳中我这样一个极简主义者的 G 点。与 LaT">
+<meta property="og:locale">
+<meta property="og:image" content="https://ulyssesapp.com/blog/wp-content/uploads/2016/11/MathJax-Example.png">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006y8lVajw1faa47j8atxj30qc0c6dht.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006y8lVajw1faa4ihjkfzj31hs11ywni.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006y8lVajw1faa6un0c9bj31kw0zkq80.jpg">
+<meta property="article:published_time" content="2016-11-30T10:17:00.000Z">
+<meta property="article:modified_time" content="2020-12-25T00:08:08.979Z">
+<meta property="article:author" content="P. Wu">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="LaTeX">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ulyssesapp.com/blog/wp-content/uploads/2016/11/MathJax-Example.png">
+
+<link rel="canonical" href="https://patricorgi.github.io/2016/11/30/%E7%AE%80%E4%B8%AD%E6%B1%82%E6%95%88%EF%BC%9AMarkdown%20%E9%81%87%E4%B8%8A%20LaTeX/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>简中求效：Markdown 遇上 LaTeX | Patrick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Patrick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share is the best way to learn.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/11/30/%E7%AE%80%E4%B8%AD%E6%B1%82%E6%95%88%EF%BC%9AMarkdown%20%E9%81%87%E4%B8%8A%20LaTeX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="Share is the best way to learn.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          简中求效：Markdown 遇上 LaTeX
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-30 05:17:00" itemprop="dateCreated datePublished" datetime="2016-11-30T05:17:00-05:00">2016-11-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-24 19:08:08" itemprop="dateModified" datetime="2020-12-24T19:08:08-05:00">2020-12-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="简中求效：Markdown-遇上-LaTeX"><a href="#简中求效：Markdown-遇上-LaTeX" class="headerlink" title="简中求效：Markdown 遇上 LaTeX"></a>简中求效：Markdown 遇上 LaTeX</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我是一个物理工作者，MS Word／WPS 什么的很早就扔掉了。LaTeX 才是我们的家常便饭。本科时候在课堂上我就喜欢拿着电脑做笔记。macOS 下只要下载一个 MacTeX，它自带 TeXShop，然后一切就都搞定了。</p>
+<p>后来知道了 Markdown 语法，这样一个花 2 分钟就能学会的「标记语言」直接戳中我这样一个极简主义者的 G 点。与 LaTeX 最大的不同在于，它不会像大多数 LaTeX 编辑器一样在仅修改了一个标点之后，都要求重新编译。</p>
+<p>然而要同时实现 Markdown 的极「简」，和 LaTeX 的「效」能是非常艰难的。虽然在静态博客里可以使用 MathJax 显示公式，但在 macOS 端编辑博文时没有 LaTeX 预览也是很难过的一件事。</p>
+<h3 id="MWeb"><a href="#MWeb" class="headerlink" title="MWeb"></a><del>MWeb</del></h3><p>你可能会说 MWeb 就支持 LaTeX 的编辑和预览呀！的确，我尝试过它，但这里提出两点我后来放弃它的原因：</p>
+<ol>
+<li>预览的公式字体太难看，不知道为什么作者不设置为科学期刊上最为常用的 Latin Modern Math 字体。我在作者的 GitHub 下发过一个 issue，他也没能给我一个有效的答复。</li>
+<li>MWeb 没有 iOS 版，不能多设备同步。</li>
+</ol>
+<h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a><del>Typora</del></h3><p>还有声名鹊起的 Typora，我觉得它单作为 Markdown+LaTeX 编辑器可谓最优选：插入公式的方式不能再漂亮、默认的主题也简单优雅。</p>
+<p>但它不能对文档进行管理，没有所谓的「外部文件夹」。而且，它也没有 iOS 版。</p>
+<p>综上，我的要求其实很苛刻——优秀的编辑环境、Markdown、LaTeX预览、多设备同步集合为一体。于是我开始在 Ulysses 和 iA Writer 上寻求出路，因为这两个软件首先就符合我对「优秀的编辑环境」的要求。最终我找到了我的解决方案。</p>
+<h2 id="方案一-Ulysses-HTML"><a href="#方案一-Ulysses-HTML" class="headerlink" title="方案一 Ulysses + HTML"></a>方案一 Ulysses + HTML</h2><p>Ulysses 是支持 HTML 预览的，所以我们在 Markdown 文档里插入一些 HTML 语言也没有关系。前天我就在 <a target="_blank" rel="noopener" href="https://twitter.com/ulyssesapp">@ulysses</a> 官推上看到这个在 Ulysses 下实现公式预览的方案。</p>
+<p>只需要在文档开头加入这四行 Raw Source 即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~~ &lt;script type&#x3D;&quot;text&#x2F;x-mathjax-config&quot;&gt;</span><br><span class="line">~~ MathJax.Hub.Config(&#123;tex2jax: &#123;inlineMath:[[&#39;$&#39;,&#39;$&#39;]]&#125;&#125;);</span><br><span class="line">~~ &lt;&#x2F;script&gt;</span><br><span class="line">~~ &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;http:&#x2F;&#x2F;cdn.mathjax.org&#x2F;mathjax&#x2F;latest&#x2F;MathJax.js?config&#x3D;TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>其实这就是 HTML 下的 MathJax 相关设置。不用担心那些小波浪号，它们是 Ulysses 用来标记 Raw Source 的符号，无论是导出还是发布到你的的静态博客上都不会造成影响。</p>
+<p>之后只要将正常 LaTeX 语法包裹进 Raw Source 格式中即可，比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">神奇公式：</span><br><span class="line">~~ $$\left(iD\!\!\!&#x2F;+m\right)\psi &#x3D; 0$$</span><br><span class="line">~$\dfrac&#123;1&#125;&#123;2&#125;$~，这就是二分之一，想不到吧！</span><br></pre></td></tr></table></figure>
+<p>然后调整 Ulysses 的导出格式为 HTML，使用 ⌘+⇧+P 就可以预览文档里的公式了！</p>
+<p><a target="_blank" rel="noopener" href="https://ulyssesapp.com/blog/wp-content/uploads/2016/11/MathJax-Example.png"><img src="https://ulyssesapp.com/blog/wp-content/uploads/2016/11/MathJax-Example.png" alt="img"></a></p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://ulyssesapp.com/blog/2016/11/eline-explains-5/">Writing Mathematical Equations in Ulysses</a></p>
+<h2 id="方案二-iA-Writer-Export-Markdown-to-PDF-Service"><a href="#方案二-iA-Writer-Export-Markdown-to-PDF-Service" class="headerlink" title="方案二 iA Writer + Export Markdown to PDF(Service)"></a>方案二 iA Writer + Export Markdown to PDF(Service)</h2><p>我们也可以利用 iA Writer 实现 Markdown + LaTeX。</p>
+<p>同样是解决 LaTeX 公式预览问题，我发现了这样一个系统服务——<a target="_blank" rel="noopener" href="https://github.com/lukaskubanek/iA-Writer-Export">Export Markdown to PDF</a>。它是基于 pandoc 命令，在 iA Writer 下将文档转换为 PDF，并在默认 PDF 应用程序下预览。虽然不像 iA Writer 自带的预览那样高效，但如果只是插入几行公式，对我来说这已经最佳方案了。况且近日发布的 iA Writer 4 支持多文件、模块化编辑，对于每个子文件而言 pandoc 的编译效率也十分高了。<br><a target="_blank" rel="noopener" href="http://ww3.sinaimg.cn/large/006y8lVajw1faa47j8atxj30qc0c6dht.jpg"><img src="http://ww3.sinaimg.cn/large/006y8lVajw1faa47j8atxj30qc0c6dht.jpg" alt="img"></a></p>
+<p>遗憾的是，这个 Export Markdown to PDF 已多年没有维护了，它环境变量设置已经因为新版本路径更改无法使用，而且最致命的是它不支持中文文档。于是我将它 Fork 了一下，修改成为了支持中文的 LaTeX 编译服务，下面我用四步教大家如何配置它：</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先，毋庸置疑你的电脑里必须安装有 <a target="_blank" rel="noopener" href="http://www.tug.org/mactex/">MacTeX</a>，而且我建议安装最新的 2016 版。<br>以及，转换 pdf 所必需的 pandoc（用 <code>brew install pandoc</code> 安装）</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>配置 xelatex 中文编译模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~&#x2F;Templates</span><br><span class="line">cd ~&#x2F;Templates</span><br><span class="line">pandoc -D latex &gt; template.tex</span><br></pre></td></tr></table></figure>
+<p>然后编辑 <code>template.tex</code> 文件，定位到<code>% if luatex or xelatex</code>，在下图白色箭头处（<code>\fi</code>的下一行）插入如下语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">% SUPPORT for Chinese</span><br><span class="line">\usepackage[boldfont,slantfont,CJKchecksingle]&#123;xeCJK&#125;</span><br><span class="line">\usepackage&#123;fontspec,xltxtra,xunicode&#125;</span><br><span class="line">\defaultfontfeatures&#123;Mapping&#x3D;tex-text,Scale&#x3D;MatchLowercase&#125;</span><br><span class="line">\punctstyle&#123;quanjiao&#125;</span><br><span class="line">\setCJKmainfont&#123;WenQuanYi Micro Hei&#125;</span><br><span class="line">\setCJKsansfont&#123;KaiTi&#125;</span><br><span class="line">\setCJKmonofont&#123;SimSun&#125;</span><br><span class="line">\defaultfontfeatures&#123;Ligatures&#x3D;TeX,Scale&#x3D;MatchLowercase&#125;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="http://ww2.sinaimg.cn/large/006y8lVajw1faa4ihjkfzj31hs11ywni.jpg"><img src="http://ww2.sinaimg.cn/large/006y8lVajw1faa4ihjkfzj31hs11ywni.jpg" alt="img"></a><br>其中<code>\setCJKmainfont&#123;WenQuanYi Micro Hei&#125;</code>可以自定义主字体（LaTeX 老司机也可以尝试修改其他内容），我测试时用的是「文泉驿微米黑」字体，大家可自行修改。但最好像我一样使用字体的英文名称。什么？你不知道怎么查看字体的英文名称？到终端使用下面这条命令查阅系统内的字体英文名吧。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fc-list :outline -f &quot;%&#123;family&#125;\n&quot;</span><br></pre></td></tr></table></figure>
+<p>如果系统提示找不到 <code>fc-list</code> 命令，可能你需要去安装一个 <a target="_blank" rel="noopener" href="https://www.xquartz.org/">XQuartz</a></p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>下载我 Fork 的 <a target="_blank" rel="noopener" href="https://github.com/patricorgi/iA-Writer-Export">Export Markdown to PDF</a>，把 workflow 文件放到<code>~/Library/Services</code>路径下</p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>在 iA Writer 下使用：iA Writer → 服务(Services) → Export Markdown to PDF 即可。编译的时候可以看到右上菜单栏会有个旋转的小齿轮⚙️，特别可爱。如果 LaTeX 语法有错误，错误信息会以弹窗的形式出现，方便你 debug。</p>
+<p><a target="_blank" rel="noopener" href="http://ww2.sinaimg.cn/large/006y8lVajw1faa6un0c9bj31kw0zkq80.jpg"><img src="http://ww2.sinaimg.cn/large/006y8lVajw1faa6un0c9bj31kw0zkq80.jpg" alt="img"></a></p>
+<h3 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h3><ul>
+<li><code>$ \dfrac&#123;1&#125;&#123;2&#125;$</code> 会报错，要改为<code>$\dfrac&#123;1&#125;&#123;2&#125;$</code>才行，好像是第一个<code>$</code>后面不能出现空格</li>
+<li>需要自行研究一些特殊宏包的插入，例如页边距的设置等，毕竟在 Markdown 文档里无法使用 <code>\usepackage</code> 命令了，有些茫然不知所措</li>
+<li>用 Automator 打开 Export Markdown to PDF.workflow 你可以看到下面这些内容：<ul>
+<li>pandoc 环境设置</li>
+<li>xelatex 环境设置</li>
+<li>pandoc 转换 pdf 的命令，其中 <code>--template</code> 字段设置的是 pandoc 编译模板，这就是第二步中为何要生成 <code>~/Templates/template.tex</code> 文件的原因，你可以自行配置多个模板，然后记得在 workflow 文件里修改模板位置。</li>
+</ul>
+</li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>祝大家 LaTeX 愉快！</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/macOS/" rel="tag"># macOS</a>
+              <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
+              <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/11/27/Workflow%20+%20Pythonista%20%E5%9C%A8%20iOS%20%E4%B8%8A%E4%BD%BF%E7%94%A8%E6%96%B0%E6%B5%AA%E7%9F%AD%E9%93%BE%E6%8E%A5%E6%9C%8D%E5%8A%A1/" rel="prev" title="Workflow + Pythonista 在 iOS 上使用新浪短链接服务">
+      <i class="fa fa-chevron-left"></i> Workflow + Pythonista 在 iOS 上使用新浪短链接服务
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/12/02/Snappy%EF%BC%9A%E5%8D%A1%E7%89%87%E5%BC%8F%E6%88%AA%E5%B1%8F%E5%B7%A5%E5%85%B7/" rel="next" title="Snappy：卡片式截屏工具">
+      Snappy：卡片式截屏工具 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%B8%AD%E6%B1%82%E6%95%88%EF%BC%9AMarkdown-%E9%81%87%E4%B8%8A-LaTeX"><span class="nav-number">1.</span> <span class="nav-text">简中求效：Markdown 遇上 LaTeX</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MWeb"><span class="nav-number">1.1.1.</span> <span class="nav-text">MWeb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-number">1.1.2.</span> <span class="nav-text">Typora</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80-Ulysses-HTML"><span class="nav-number">1.2.</span> <span class="nav-text">方案一 Ulysses + HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C-iA-Writer-Export-Markdown-to-PDF-Service"><span class="nav-number">1.3.</span> <span class="nav-text">方案二 iA Writer + Export Markdown to PDF(Service)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="nav-number">1.3.1.</span> <span class="nav-text">第一步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5"><span class="nav-number">1.3.2.</span> <span class="nav-text">第二步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5"><span class="nav-number">1.3.3.</span> <span class="nav-text">第三步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5"><span class="nav-number">1.3.4.</span> <span class="nav-text">第四步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E8%AF%B4%E6%98%8E"><span class="nav-number">1.3.5.</span> <span class="nav-text">一些说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.4.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">P. Wu</p>
+  <div class="site-description" itemprop="description">Share is the best way to learn.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">P. Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

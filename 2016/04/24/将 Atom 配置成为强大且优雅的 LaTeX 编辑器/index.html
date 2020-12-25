@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="将 Atom 配置成为强大且优雅的 LaTeX 编辑器   Atom 是跨越 Windows、Linux、Mac OS 三大桌面平台，由 GitHub 开发的自由及开放源代码的文字和代码编辑器。 其最大的亮点在于其可定制性。这种可定制性，按官方的描述为——A hackable editor，无论你是使用何种语言的用户都能将其配置成为自己最顺手的代码编辑器。    那么，这种可定制性是如何实现的呢？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将 Atom 配置成为强大且优雅的 LaTeX 编辑器">
+<meta property="og:url" content="https://patricorgi.github.io/2016/04/24/%E5%B0%86%20Atom%20%E9%85%8D%E7%BD%AE%E6%88%90%E4%B8%BA%E5%BC%BA%E5%A4%A7%E4%B8%94%E4%BC%98%E9%9B%85%E7%9A%84%20LaTeX%20%E7%BC%96%E8%BE%91%E5%99%A8/index.html">
+<meta property="og:site_name" content="Patrick&#39;s Blog">
+<meta property="og:description" content="将 Atom 配置成为强大且优雅的 LaTeX 编辑器   Atom 是跨越 Windows、Linux、Mac OS 三大桌面平台，由 GitHub 开发的自由及开放源代码的文字和代码编辑器。 其最大的亮点在于其可定制性。这种可定制性，按官方的描述为——A hackable editor，无论你是使用何种语言的用户都能将其配置成为自己最顺手的代码编辑器。    那么，这种可定制性是如何实现的呢？">
+<meta property="og:locale">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq2ec8rj30xc0dwjs5.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1fcsbq2r5m0j31kw0y5dnl.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNc79gy1fcsbqj3ustg30g408ehbq.gif">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNc79gy1fcsbqjjiojj31iw0sstf4.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq3n5u8j31kw0y5gtl.jpg">
+<meta property="og:image" content="file:///Users/patrick/Downloads/c6fb7fbb01f051a7cf634fa40040e47c.png">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbqelc2jg30dc0a0dke.gif">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbqc8gq0g30dc09e47n.gif">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq56zzsj30y10lswjs.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq5v2p1j30y10lsgqp.jpg">
+<meta property="article:published_time" content="2016-04-24T06:56:42.000Z">
+<meta property="article:modified_time" content="2020-12-24T23:44:32.747Z">
+<meta property="article:author" content="P. Wu">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="LaTeX">
+<meta property="article:tag" content="代码编辑">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq2ec8rj30xc0dwjs5.jpg">
+
+<link rel="canonical" href="https://patricorgi.github.io/2016/04/24/%E5%B0%86%20Atom%20%E9%85%8D%E7%BD%AE%E6%88%90%E4%B8%BA%E5%BC%BA%E5%A4%A7%E4%B8%94%E4%BC%98%E9%9B%85%E7%9A%84%20LaTeX%20%E7%BC%96%E8%BE%91%E5%99%A8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>将 Atom 配置成为强大且优雅的 LaTeX 编辑器 | Patrick's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Patrick's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share is the best way to learn.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/04/24/%E5%B0%86%20Atom%20%E9%85%8D%E7%BD%AE%E6%88%90%E4%B8%BA%E5%BC%BA%E5%A4%A7%E4%B8%94%E4%BC%98%E9%9B%85%E7%9A%84%20LaTeX%20%E7%BC%96%E8%BE%91%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="Share is the best way to learn.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          将 Atom 配置成为强大且优雅的 LaTeX 编辑器
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-04-24 02:56:42" itemprop="dateCreated datePublished" datetime="2016-04-24T02:56:42-04:00">2016-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-24 18:44:32" itemprop="dateModified" datetime="2020-12-24T18:44:32-05:00">2020-12-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="将-Atom-配置成为强大且优雅的-LaTeX-编辑器"><a href="#将-Atom-配置成为强大且优雅的-LaTeX-编辑器" class="headerlink" title="将 Atom 配置成为强大且优雅的 LaTeX 编辑器"></a>将 Atom 配置成为强大且优雅的 LaTeX 编辑器</h2><p><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq2ec8rj30xc0dwjs5.jpg"> </p>
+<blockquote>
+<p>Atom 是跨越 Windows、Linux、Mac OS 三大桌面平台，由 GitHub 开发的自由及开放源代码的文字和代码编辑器。<br> <br>其最大的亮点在于其可定制性。这种可定制性，按官方的描述为——A hackable editor，无论你是使用何种语言的用户都能将其配置成为自己最顺手的代码编辑器。
+ </p>
+</blockquote>
+<h2 id="那么，这种可定制性是如何实现的呢？"><a href="#那么，这种可定制性是如何实现的呢？" class="headerlink" title="那么，这种可定制性是如何实现的呢？"></a>那么，这种可定制性是如何实现的呢？</h2><p> <br>Atom 的功能是模块化的，所有简单的功能都由一个个 Package 组成，如图：<br> <br><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fcsbq2r5m0j31kw0y5dnl.jpg"></p>
+<p>当你下载并安装 Atom ，你会发现它已经自带了一些 Package ，这些 Core Packages，包括了自动补全 API、自动保存、书签……<br>除了这些 Core Packages 之外，用户还可以从<a target="_blank" rel="noopener" href="http://atom.io/packages">官方网页</a>搜索到所需的 Packages，再从终端中执行<br><code>apm install NAME_OF_PACKAGE</code> 命令来安装，这里的 <code>apm</code> 就是atom package management 的缩写啦！为了方便 Atom 新手更快入门，笔者在下面罗列了几篇关于 Atom Packages 推荐的帖子：
+ </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://atom-china.org/t/atom-autocomplete-plus-minimap-linter/82">Atom 插件下载量前三名</a></li>
+<li><a href="#">10个基本 Atom 组件</a></li>
+<li><a target="_blank" rel="noopener" href="https://blogs.aerys.in/jeanmarc-leroux/2015/07/31/atom-plugins-for-c-development/">Atom 组件 for C++ 开发</a></li>
+<li><a target="_blank" rel="noopener" href="http://elijahmanor.com/github-atom-packages/">面向网页开发的 Atom Packages</a></li>
+</ul>
+<h2 id="以及，我接下来要介绍的——关于如何将-Atom-配置为强大的-LaTeX-编辑器"><a href="#以及，我接下来要介绍的——关于如何将-Atom-配置为强大的-LaTeX-编辑器" class="headerlink" title="以及，我接下来要介绍的——关于如何将 Atom 配置为强大的 LaTeX 编辑器"></a>以及，我接下来要介绍的——关于如何将 Atom 配置为强大的 LaTeX 编辑器</h2><p> <br>要配置所谓强大的 LaTeX 编辑器，需要这样两个 Package：<a target="_blank" rel="noopener" href="https://github.com/area/language-latex">language-latex</a> 和 <a target="_blank" rel="noopener" href="http://blog.leanote.com/post/patrick5/github.com/thomasjo/atom-latex">atom-latex</a> ，后者是在 Atom 中实现 LaTeX 的编译，没什么好说的，所以以下我们只介绍 language-latex（仅针对 Mac OS X 系统，Windows 用户请参考﻿﻿﻿<a target="_blank" rel="noopener" href="https://zenagiwa.wordpress.com/2015/02/15/installing-packages-for-atom-on-windows/">这个帖子</a>中介绍的方法进行安装，过程大同小异）<br> <br>language-latex 所实现的功能是 LaTeX 命令的自动补全，就像下面这样，是不是很炫酷呢？</p>
+<p><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fcsbqj3ustg30g408ehbq.gif"><br> <br>有一点之前没有提到，那就是我们可能会出现与官网连接故障的问题，至少笔者所使用的网络环境是无法正常载入官网内容的，也无法使用 <code>apm</code> 命令进行 Package 的安装。但是大家不用担心，笔者将利用 language-latex 的安装过程，向大家介绍一种自己所采用的安装方案。<br> <br>apm 的安装其实是通过 node 组件完成的，我们首先需要在终端中安装 node，你可以使用  ﻿<a target="_blank" rel="noopener" href="http://blog.leanote.com/post/patrick5/brew.sh">Homebrew</a> 来安装 node
+ </p>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p> <br>直接在终端中运行下面这行命令即可安装 Homebrew：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>&quot;</span>﻿</span><br></pre></td></tr></table></figure>
+<p> <br>Homebrew 安装完成之后，再执行 <code>brew install node</code> 安装 node 组件<br> <br>之后，我们就可以为 Atom 安装 language-latex 了，所有官网上出现的 Package 的源代码均可在 <a target="_blank" rel="noopener" href="http://blog.leanote.com/post/patrick5/github.com">GitHub</a> 中搜到（有可能出现同名的 Package，甚至非 Atom 的 Package，所以一定要注意对应上作者的名字）。</p>
+<p>例如我在 GitHub 上搜到的 language-latex ，然后点击”Copy to Clipboard”按钮，复制这条地址，就像这样</p>
+<p><img src="https://ww1.sinaimg.cn/large/006tNc79gy1fcsbqjjiojj31iw0sstf4.jpg"><br> <br>接下来打开终端，进入 Atom 的 Package 存放路径（通常是 <code>~/.atom/packages</code>），并下载 git 包：</p>
+<p><code>cd ~/.atom/packages; git clone https://github.com/area/language-latex.git</code><br> <br><code>git clone</code> 后面的内容就是刚刚复制地址，之后会下载 Package 到目前所在的路径<br>然后进入 Package 文件夹，再用 <code>npm</code> 命令安装，npm 就是 node package management 的缩写啦！执行：</p>
+<p><code>cd language-latex; npm install</code></p>
+<p>至此，language-latex 就安装完成了，我们在 Atom 设置里的 Packages 页面中就能看到它。这个 Package 仅会在所有扩展名为 .tex.latex.text 的文件中被启用（至于为什么，答案在后面）</p>
+<p> <img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq3n5u8j31kw0y5gtl.jpg"></p>
+<p>通过这种方法，可以任意安装你所需要的 Packages，这些就留给你们自己去做啦～
+ </p>
+<h2 id="language-latex-包的简单配置"><a href="#language-latex-包的简单配置" class="headerlink" title="language-latex 包的简单配置"></a>language-latex 包的简单配置</h2><p> <br>这个 LaTex 语言的 Package 包含了绝大多数常用命令的补全。我们还可以自定义命令补全。让我们点击上一图中的 VIEW CODE 按钮查看该 Package 的源代码，打开 snippets 文件夹里的 language-latex.cson 文件。</p>
+<p><img src="file:///Users/patrick/Downloads/c6fb7fbb01f051a7cf634fa40040e47c.png"><br> <br>我们可以看到，每一个命令补全都由三行代码组成：</p>
+<pre><code>&#39;COMPLETION NAME&#39;:
+    &#39;prefix&#39;: &#39;PREFIX&#39;
+    &#39;body&#39;: &#39;BODY&#39;</code></pre>
+<p><code>COMPLETION NAME</code> 是这个 snippet 的名字<br><code>PREFIX</code> 用于识别从键盘输入的字符（串）<br><code>BODY</code> 是补全字符串——可添加转意符号，例如换行符<code>\n</code>，值得一提的是转意算符反斜杠’\‘本身的转意代码不像其它语言中是两个反斜杠<code>\\</code>而是<code>\\\\</code>四个反斜杠的。不知道是 Atom 的 bug，还是出于其它考虑，笔者觉得怪怪的。除此之外，最重要的是 Tab 键移动位符号：$0、$1、$2……，在特定位置加入这些移动位，我们可以在补全之后利用 (Shift +)Tab 键在这些位置间来回切换。比如 LaTeX 数学模式中的<code>\dfrac&#123;&#125;&#123;&#125;</code>，可以写为 <code>\dfrac&#123;$1&#125;&#123;$2&#125;</code> 这样可以在写完分子之后按 Tab 键直接书写分母，效率的提高可想而知。<br> <br><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbqelc2jg30dc0a0dke.gif"><br> <br>自定义补全代码实例，通过在 language-latex.cson 文件中任意位置加入以下三行代码，然后保存，重启 Atom：</p>
+<pre><code>&#39;myname completion&#39;:
+    &#39;prefix&#39;: &#39;pw&#39;
+    &#39;body&#39;: &#39;Patrick Wu\nA physics student who has to write code.&#39;  </code></pre>
+<p>输入 <code>pw</code> 后的补全效果</p>
+<p><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbqc8gq0g30dc09e47n.gif"><br> <br>基于 core package 中的自动补全 API，能实现所有其它语言的自动补全，并让它们在特定的文件中被启用。
+ </p>
+<h2 id="要优雅要有设计感，代码编辑器怎能不美观？"><a href="#要优雅要有设计感，代码编辑器怎能不美观？" class="headerlink" title="要优雅要有设计感，代码编辑器怎能不美观？"></a>要优雅要有设计感，代码编辑器怎能不美观？</h2><p> <br>Atom 的组件中还有一种特殊的 Package ，那就是 Theme. 没错，Atom 是可以自定义 UI 的。安装方法同 Packages 。<br> <br>Theme 分成 UI 和 syntax 两部分<br> <br>在Github中搜索关键字 “atom ui” 就能搜到许多 Atom UI<br> <br>分享两种 Google’s Material 风格：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/atom-material/atom-material-ui">atom-material-ui</a>:<br><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq56zzsj30y10lswjs.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/silvestreh/atom-material-syntax">atom-material-syntax</a>:<br><img src="https://ww2.sinaimg.cn/large/006tNc79gy1fcsbq5v2p1j30y10lsgqp.jpg"></p>
+<p>顺带一提，截图中左侧的项目文件区域中文件呈现出了不同的颜色及图标，都是特定 Package 实现的功能哦！除此之外，一些 Package 还能实现 Atom 和终端的整合、和 Vim 的整合等等……当然，如果你代码水平足够强，你也可以自己写 Package
+ </p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p> <br>Atom 高度的可定制性，让用户可以自行添加所需要的功能，打造自己最易用的代码编辑器。主体仅200M（Mac OS X系统下）与其它主流代码编辑器相比，显得轻巧了许多。不仅适合专业的程序猿使用，也适用于工作中涉及到代码编写的边缘用户。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/macOS/" rel="tag"># macOS</a>
+              <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
+              <a href="/tags/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91/" rel="tag"># 代码编辑</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2016/04/24/iOS%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB:%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%89%8B%E6%9C%BA%E4%B9%9F%E8%83%BD%E9%AB%98%E6%95%88%E8%B5%B7%E6%9D%A5/" rel="next" title="iOS 使用技巧分享：即使是手机也能高效起来">
+      iOS 使用技巧分享：即使是手机也能高效起来 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86-Atom-%E9%85%8D%E7%BD%AE%E6%88%90%E4%B8%BA%E5%BC%BA%E5%A4%A7%E4%B8%94%E4%BC%98%E9%9B%85%E7%9A%84-LaTeX-%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">将 Atom 配置成为强大且优雅的 LaTeX 编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%EF%BC%8C%E8%BF%99%E7%A7%8D%E5%8F%AF%E5%AE%9A%E5%88%B6%E6%80%A7%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%91%A2%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">那么，这种可定制性是如何实现的呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E5%8F%8A%EF%BC%8C%E6%88%91%E6%8E%A5%E4%B8%8B%E6%9D%A5%E8%A6%81%E4%BB%8B%E7%BB%8D%E7%9A%84%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E5%B0%86-Atom-%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84-LaTeX-%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">以及，我接下来要介绍的——关于如何将 Atom 配置为强大的 LaTeX 编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">安装过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#language-latex-%E5%8C%85%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">language-latex 包的简单配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E4%BC%98%E9%9B%85%E8%A6%81%E6%9C%89%E8%AE%BE%E8%AE%A1%E6%84%9F%EF%BC%8C%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8%E6%80%8E%E8%83%BD%E4%B8%8D%E7%BE%8E%E8%A7%82%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">要优雅要有设计感，代码编辑器怎能不美观？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">7.</span> <span class="nav-text">结语</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">P. Wu</p>
+  <div class="site-description" itemprop="description">Share is the best way to learn.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">P. Wu</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
