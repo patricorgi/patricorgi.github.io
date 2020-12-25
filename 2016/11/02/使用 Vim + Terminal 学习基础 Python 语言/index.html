@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="使用 Vim + Terminal 学习基础 Python 语言 前言这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：  macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。 将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的">
+  <meta name="description" content="前言这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：  macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。 将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的缺陷，说白了就是只能输出无法输入。比如说我用 Python 编了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Vim + Terminal 学习基础 Python 语言">
 <meta property="og:url" content="https://patricorgi.github.io/2016/11/02/%E4%BD%BF%E7%94%A8%20Vim%20+%20Terminal%20%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%20Python%20%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Patrick&#39;s Blog">
-<meta property="og:description" content="使用 Vim + Terminal 学习基础 Python 语言 前言这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：  macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。 将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的">
+<meta property="og:description" content="前言这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：  macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。 将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的缺陷，说白了就是只能输出无法输入。比如说我用 Python 编了">
 <meta property="og:locale">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79jw1f9dtic8382j30rs0fa0uk.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79jw1f9dsrr9ppug30dc06eb29.gif">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79jw1f9drxbgyq0j30q004wjs5.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79jw1f9drwhegpyj30py05wq3x.jpg">
 <meta property="article:published_time" content="2016-11-02T09:55:24.000Z">
-<meta property="article:modified_time" content="2020-12-24T23:47:34.192Z">
+<meta property="article:modified_time" content="2020-12-25T05:10:02.207Z">
 <meta property="article:author" content="P. Wu">
 <meta property="article:tag" content="macOS">
 <meta property="article:tag" content="Python">
@@ -189,7 +189,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-24 18:47:34" itemprop="dateModified" datetime="2020-12-24T18:47:34-05:00">2020-12-24</time>
+                <time title="修改时间：2020-12-25 00:10:02" itemprop="dateModified" datetime="2020-12-25T00:10:02-05:00">2020-12-25</time>
               </span>
 
           
@@ -203,7 +203,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="使用-Vim-Terminal-学习基础-Python-语言"><a href="#使用-Vim-Terminal-学习基础-Python-语言" class="headerlink" title="使用 Vim + Terminal 学习基础 Python 语言"></a>使用 Vim + Terminal 学习基础 Python 语言</h1><p><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9dtic8382j30rs0fa0uk.jpg"></p>
+        <p><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9dtic8382j30rs0fa0uk.jpg"></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：</p>
 <ol>
 <li>macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。</li>
@@ -331,7 +331,7 @@ You HAVE to pick one option. See the docs for more information.</code></pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Vim-Terminal-%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-Python-%E8%AF%AD%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">使用 Vim + Terminal 学习基础 Python 语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-Vundle-%E5%AE%89%E8%A3%85-YouCompleteMe"><span class="nav-number">1.2.</span> <span class="nav-text">利用 Vundle 安装 YouCompleteMe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bpython"><span class="nav-number">1.3.</span> <span class="nav-text">bpython</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.4.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-Vundle-%E5%AE%89%E8%A3%85-YouCompleteMe"><span class="nav-number">2.</span> <span class="nav-text">利用 Vundle 安装 YouCompleteMe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bpython"><span class="nav-number">3.</span> <span class="nav-text">bpython</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -345,7 +345,7 @@ You HAVE to pick one option. See the docs for more information.</code></pre>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
