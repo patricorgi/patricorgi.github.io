@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-02-26 19:18:47 / 修改时间：19:19:00" itemprop="dateCreated datePublished" datetime="2021-02-26T19:18:47-05:00">2021-02-26</time>
+              <time title="创建时间：2021-02-26 19:18:47 / 修改时间：19:22:40" itemprop="dateCreated datePublished" datetime="2021-02-26T19:18:47-05:00">2021-02-26</time>
             </span>
 
           
@@ -201,7 +201,7 @@
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>首先，新建一个空的workflow，并右键空白处→Inputs→Script Filter新建一个Script Filter模块</p>
 <p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnvljv9vn8j319w0u01kz.jpg"></p>
 <p>然后，右键点击左栏中的workflow，选择Open in Finder，<br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnvlv1uy5dj30za0pm15n.jpg"></p>
-<p>这样会打开这个workflow所在的根目录，在该目录中建立<code>myscript.py</code>文件，文件内容如下：<img src="https://tva1.sinaimg.cn/large/008eGmZEly1go1rkc5x61j30u00vnqv7.jpg"></p>
+<p>这样会打开这个workflow所在的根目录，在该目录中建立<code>myscript.py</code>文件，文件内容如下：<img src="https://tva1.sinaimg.cn/large/008eGmZEly1go1s7rpneuj30t40veqcw.jpg"></p>
 <p>这个<code>results</code>变量是一个dict，其中只有一个键值对，<code>&quot;items&quot;</code>的值是一系列会显示在Alfred选单里的条目，条目的数据类型为dict，其中不同的键对应着条目的不同属性。你需要用<code>json.dumps</code>将其转换成json格式，再<code>print</code>出来，相应的内容就会像下图那样显示在Alfred的结果里了。</p>
 <p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnvlta2nmcj316g0c6q89.jpg"></p>
 <p>上面涉及到的<code>title</code>， <code>subtitle</code>和<code>arg</code>是最基本的几个键，你可以在<a target="_blank" rel="noopener" href="https://www.alfredapp.com/help/workflows/inputs/script-filter/json/">这个页面</a>下找到官方支持的所有键。这三个键的前两个是主副标题，最后一个<code>arg</code>则是会进入workflow下一步操作的输出值query。在这个例子中，两个条目的输出值都是一个网址，如果我把这个Script Filter连接上一个Open URL的操作（见下图），并指定URL为<code>&#123;query&#125;</code>。那么当我选中一个条目，就会打开对应的网址。</p>
