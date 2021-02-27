@@ -145,6 +145,236 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/11/02/%E5%88%A9%E7%94%A8%20GitHub+Hexo+NexT%20%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/02/%E5%88%A9%E7%94%A8%20GitHub+Hexo+NexT%20%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">利用 GitHub+Hexo+NexT 搭建你的个人博客</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-11-02 07:38:24" itemprop="dateCreated datePublished" datetime="2016-11-02T07:38:24-04:00">2016-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-25 00:10:05" itemprop="dateModified" datetime="2020-12-25T00:10:05-05:00">2020-12-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="为什么要搭建自己的博客"><a href="#为什么要搭建自己的博客" class="headerlink" title="为什么要搭建自己的博客"></a>为什么要搭建自己的博客</h2><p>如果你需要有一个创作环境——无论是作为个人文集还是产品展示主页，而你又：</p>
+<ol>
+<li>忍受不了博客服务网站纷乱无序、不讲道理的广告</li>
+<li>忍受不了博客服务网站提供的粗糙排版格式</li>
+<li>忍受不了博客服务网站长而难记的域名，标识度、个性度不够</li>
+<li>不喜欢博客服务网站的社交元素，就是类似「关注」的功能</li>
+<li>是个极简主义者</li>
+</ol>
+<p>那么你有两个选择，一是微信公众号，二是参考本文为自己搭建个人博客。</p>
+<h2 id="GitHub-Pages-设置"><a href="#GitHub-Pages-设置" class="headerlink" title="GitHub Pages 设置"></a>GitHub Pages 设置</h2><p>首先要在 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 里注册账号，用户名+Email+密码三段式注册，简单明快。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79jw1f9e3vp4673j30n403qmxo.jpg"></p>
+<p>注册后登陆你的账号，点击右上角的➕，选择 New Repository，并在 Repository Name 一栏里填入「你的用户名.github.io」，如果你不知道用户名是什么，就是 Owner 字段下面的那段文字。见上图，例如我的用户名是 patricorgi，Repository Name 就是 patricorgi.github.io 。之后点击页面下方的 Create Repository 绿色按钮，这样 GitHub Pages 的准备就做完了。每个 GitHub 账号能且仅能创建一个这样的主页。</p>
+<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><h3 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h3><blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<h3 id="什么是-Markdown-语言？"><a href="#什么是-Markdown-语言？" class="headerlink" title="什么是 Markdown 语言？"></a>什么是 Markdown 语言？</h3><p>Markdown 语言易读易写，妈妈再也不用纠结我的文章排版问题了，只需要花两三分种学习一下基本语法，你就可以写出排版精致的文章。Markdown 语法学习，请看<a target="_blank" rel="noopener" href="http://sspai.com/25137">这篇文章</a>中「Markdown 语法的简要规则」部分。</p>
+<p>在安装 Hexo 之前，还需要先确保电脑中已安装 <a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js</a> 和 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a>，然后只要在终端中执行一条命令即可完成 Hexo 的安装</p>
+<p><code>npm install -g hexo-cli</code></p>
+<p>有些 macOS 用户可能会在这一步遇到问题，那么请安装 Xcode 8.1 并进入 Xcode  8.1 -&gt; Preference -&gt; Location -&gt; 选择 Command Line Tools，问题应该能解决。</p>
+<p>至此 Hexo 已经安装在你的电脑上。</p>
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><p>在终端里<code>cd</code>到你用来建站的路径下，建好之后一般就不移动了，所以要选个风水宝地哦。然后执行下面的命令：</p>
+<pre><code>hexo init blogname
+cd blogname
+npm install</code></pre>
+<p>其中<code>blogname</code>是用来存放你个人站点内容的文件夹名称，包括 Hexo 博客的框架文件、主题文件、博文资源等等——我们就称之为「站点文件夹」或「站点根目录」把。</p>
+<h2 id="将-Hexo-站点与-GitHub-Pages-关联"><a href="#将-Hexo-站点与-GitHub-Pages-关联" class="headerlink" title="将 Hexo 站点与 GitHub Pages 关联"></a>将 Hexo 站点与 GitHub Pages 关联</h2><p>用<code>vim</code>打开站点根目录下的「站点配置文件」<code>_config.yml</code>，找到<code>deploy</code>和<code>type</code>字段。删除这两行，然后加入以下四行：</p>
+<pre><code>deploy:
+type: git #注意以下三行前面都有一个 Tab 的缩进
+repo: https://github.com/patricorgi/patricorgi.github.io.git
+branch: master</code></pre>
+<p>这里<code>repo: </code>后的网址对应于你的 GitHub Pages 提交代码的 git 地址，一般来说是<code>https://github.com/你的用户名/你的用户名.github.io.git</code>，这里的「你的用户名」与 GitHub Pages 设置里的「你的用户名」一样。比如我的用户名是patricorgi。</p>
+<p>保存「站点配置文件」，然后在站点文件夹下使用<code>hexo s</code>命令测试一下网站是否配置成功，如果成功应该会提示<code>Hexo is running at http://localhost:4000/. Press Ctrl+C to stop</code>，这时候在浏览器中打开<code>localhost:4000</code>站点，如果能够正常显示页面（见下图），则表示建站成功。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79jw1f9e6utc1p5j30m80fi76e.jpg"></p>
+<p>你可以在「站点配置文件」中靠前的部分看到这几行</p>
+<pre><code>title: ## 冒号后面输入你的博客名称
+subtitle: ## 副标题
+description: ## 对博客的一段文字描述
+author: ## 作者，也就是你的名字
+language: zh-Hans ## 这一行如果不是这样就改成这样，这样一来就是中文界面
+timezone: #在这一行不用管 </code></pre>
+<h2 id="发布网页"><a href="#发布网页" class="headerlink" title="发布网页"></a>发布网页</h2><p>因为 Hexo 是静态博客，所以我们必须进行「发布」操作才能更新博客。何为静态？按笔者的理解就是，你无法直接在网站中更改内容，你的每一次修改，都需要在你的电脑里「发布」后，才能更新到博客中去，哪怕只是修改一个句号也必须重新「发布」。</p>
+<p>发布网页的命令只有以下三行：</p>
+<pre><code>hexo clean ## 清理缓存，这句不执行也可
+hexo g ## 或 hexo generate 生成网页
+hexo d ## 或 hexo deploy 发布网页</code></pre>
+<h2 id="更改-NexT-主题"><a href="#更改-NexT-主题" class="headerlink" title="更改 NexT 主题"></a>更改 NexT 主题</h2><p>上面你看到的站点页面是 Hexo 自带的 Landscape 主题，我觉得好丑啊。于是我将其更改为 NexT 主题，你可以在<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/getting-started.html">NexT 官网</a>查看该主题的安装流程。</p>
+<p>配置 NexT 主题之后，仍要对站点进行生成和发布操作才能更新你的博客。再强调一次，任何修改要更新到网页上去都必须重新「发布」。</p>
+<h2 id="创建新博文"><a href="#创建新博文" class="headerlink" title="创建新博文"></a>创建新博文</h2><p>建站之后有默认的一篇博文「Hello World」，里面详述了如何创建新博文。除了利用这篇博文中介绍的<code>hexo new post NAME</code>的命令之外，你还可以通过在「站点根目录」的<code>source/_posts</code>文件夹中创建 Markdown 文件来创建新博文，不过要在文件开头加上这么几行：</p>
+<pre><code>---
+title: 利用 GitHub+Hexo+NexT 搭建你的个人博客
+date: 2016-11-2 15:3824
+tags: 
+- blog
+- markdown
+---</code></pre>
+<p>以设置博文的标题、日期、标签，否则你的博文只会显示为「未命名」。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，你已经拥有自己的网站啦。如果你觉得域名中存在 github.io 字段，还不够个性。你还可以尝试绑定自己购买的域名，然后在 「站点文件夹」下的 public 中新建「CNAME」文件，并添加你的域名到第一行即可。</p>
+<center>
+![](http://ww3.sinaimg.cn/large/006tNc79jw1f9brc50sfaj304w04wdfu.jpg)
+</center>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/11/02/%E4%BD%BF%E7%94%A8%20Vim%20+%20Terminal%20%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%20Python%20%E8%AF%AD%E8%A8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="P. Wu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Patrick's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/02/%E4%BD%BF%E7%94%A8%20Vim%20+%20Terminal%20%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%20Python%20%E8%AF%AD%E8%A8%80/" class="post-title-link" itemprop="url">使用 Vim + Terminal 学习基础 Python 语言</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-11-02 05:55:24" itemprop="dateCreated datePublished" datetime="2016-11-02T05:55:24-04:00">2016-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-25 00:10:02" itemprop="dateModified" datetime="2020-12-25T00:10:02-05:00">2020-12-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="http://ww3.sinaimg.cn/large/006tNc79jw1f9dtic8382j30rs0fa0uk.jpg"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这几天开始自学 Python 语言，采取的是 vim + bpython 的方式。至于为什么，原因有两点：</p>
+<ol>
+<li>macOS 自带的 IDLE 不方便进行 .py 文件读写+执行的并行操作，而这样的操作在学习 Python 过程中是十分频繁的。</li>
+<li>将 Xcode 配置为 Python 的 IDE 也是个常见的方案，但是在交互上有致命的缺陷，说白了就是只能输出无法输入。比如说我用 Python 编了一个小程序，第一个部分就是需要用户输入一个字符串，Xcode 表示一脸懵逼。</li>
+</ol>
+<p>综上，小巧精致的 Vim + Terminal 无疑是在 macOS 甚至其他 Linux 系统上进行 Python 学习的最优方案。</p>
+<p>然后直接抛出我的学习资料。其实就是这么一个<a target="_blank" rel="noopener" href="http://codingpy.com/article/vim-and-python-match-in-heaven/">帖子</a>。按照里面的步骤一步步操作，可以完成几乎所有的配置，让你有个舒适 Python 学习环境。只在下文分享两个我在配置过程中遇到的问题和解决方案，如果你也遇到了同样的问题，可作为参考。</p>
+<h2 id="利用-Vundle-安装-YouCompleteMe"><a href="#利用-Vundle-安装-YouCompleteMe" class="headerlink" title="利用 Vundle 安装 YouCompleteMe"></a>利用 Vundle 安装 YouCompleteMe</h2><p><img src="http://ww4.sinaimg.cn/large/006tNc79jw1f9dsrr9ppug30dc06eb29.gif"></p>
+<p>我卡在安装可以自动补全 Python 语法的 Vim 插件 YouCompleteMe（以下简称YCM）。我利用 Vundle 安装 YCM 的时候 Processing 了好久。</p>
+<p>其实这里不要急躁，虽说只是个插件，但 YCM 却有很大的体积，所以要下载很久。这里只有耐心等待，或者换一个好一点的网络环境。</p>
+<p>什么？你不知道 Vundle 是啥？那么请看<a target="_blank" rel="noopener" href="https://github.com/VundleVim/Vundle.vim">这里</a>。</p>
+<p>YCM 安装终于结束，但其实只是将 YCM 下载到了<code>.vim/bundle/</code>的目录下了而已，我们还需要进行编译。编译过程也很简单，只需两条命令：</p>
+<pre><code>cd ~/.vim/bundle/YouCompleteMe #进入YCM的目录
+./install.sh #执行安装脚本，这里使用 ./install.py 也行</code></pre>
+<p>如果你还经常接触到 C 语言环境，那么你可能还需要 clang 的补全，那么上面的第二条语句应该改成</p>
+<pre><code>./install.sh --clang-completer</code></pre>
+<p>然而这里我报了错，提示说</p>
+<pre><code>You have not specified which libclang to use. You have several options:\n
+1. Set PATH_TO_LLVM_ROOT to a path to the root of a LLVM+Clang binary 
+distribution. You can download such a binary distro from llvm.org. This 
+is the recommended approach.\n
+2. Set USE_SYSTEM_LIBCLANG to ON; this makes YCM search for the system 
+version of libclang.\n
+3. Set EXTERNAL_LIBCLANG_PATH to a path to whatever 
+libclang.[so|dylib|dll] you wish to use.\n
+You HAVE to pick one option. See the docs for more information.</code></pre>
+<p>对，还需要 C 语言库，需要到到<a target="_blank" rel="noopener" href="http://llvm.org/releases/download.html">clang官网</a>下载，得到的是 .tar.xz 格式的双层压缩文件 clang+llvm-3.9.0-x86_64-apple-darwin.tar.xz（目前最新版本是 3.9.0，你下载的时候就不一定了），.xz 无法直接解压，需要到终端去利用<code>unxz</code>命令解压，然而<code>unxz</code>命令我的电脑里神TM的没有。我尝试了一下 <code>brew install xz</code>，没想到 brew 安装器的源里竟然有 xz，省了我不少事情（相比于macOS 下利用<a target="_blank" rel="noopener" href="http://brew.sh/index_zh-cn.html">brew</a>管理器安装套件，其他 linux 系统下应该是 apt-get 吧）。之后利用<code>unxz</code>成功解压，后缀名变成 tar，这时候直接用 macOS 自带的「归档实用工具」解压即可得到文件夹 clang+llvm-3.9.0-x86_64-apple-darwin。</p>
+<p>这样我们可以重新回到 YCM 的编译上了。</p>
+<p>再次从终端进入 YCM 目录<br><code>cd ~/.vim/bundle/YouCompleteMe </code><br>然后在执行安装命令前加上 clang 库的路径，命令为<br><code>PATH_TO_LLVM_ROOT=~/Downloads/clang+llvm-3.9.0-x86_64-apple-darwin ./install.sh --clang-completer</code><br>最后提示编译成功<br>注意：这里我将源包文件夹放到了<code>~/Downloads</code> 目录下</p>
+<h2 id="bpython"><a href="#bpython" class="headerlink" title="bpython"></a>bpython</h2><p>其实 macOS 自带的 IDLE 可以进行 python 的学习，并且有语法高亮的功能，但是我没搞清楚它能否像终端一样方便地读写文件，于是我就放弃了。在终端中执行<code>python</code>命令也可以进入 python shell，跟 IDLE 一毛一样，但是就是没有了语法高亮，真是蓝瘦。所以这里要介绍 bpython，它可以说是终端上的「IDEL shell」，哈哈哈，不仅支持<strong>语法高亮</strong>还支持<strong>自动补全</strong>（这里打住一下，之前 YCM 说的也是自动补全，但人家是 Vim 编辑器上的，与终端内执行命令的自动补全是两码事）。与 python 命令不同的是，它前头多了个 B（废话</p>
+<p>贴两张图看效果</p>
+<ul>
+<li>普通python shell：<br><img src="http://ww2.sinaimg.cn/large/006tNc79jw1f9drxbgyq0j30q004wjs5.jpg"></li>
+<li>装 Bpython shell：<br><img src="http://ww1.sinaimg.cn/large/006tNc79jw1f9drwhegpyj30py05wq3x.jpg"></li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，我们完成了 Vim + Terminal 的 Python 学习环境设置</p>
+<center>
+![](http://ww3.sinaimg.cn/large/006tNc79jw1f9brc50sfaj304w04wdfu.jpg)
+</center>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2016/10/31/%E7%82%B8%E9%85%B1%E9%9D%A2%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -507,13 +737,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

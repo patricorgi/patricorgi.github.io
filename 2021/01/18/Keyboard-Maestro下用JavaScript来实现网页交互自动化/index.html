@@ -20,27 +20,20 @@
     var CONFIG = {"hostname":"patricorgi.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="其实这是一个小小的 LCP + Drafts + TextExpander 实例，因为微博上有人求方法，我就写一个正式的教程吧。 无差别日记需要用到的 App 有：  Launch Center Pro (LCP) Drafts 4 TextExpander 一个支持 URL Scheme 的笔记应用，比如 Day One（或 Evernote ）  我把 Launch Center Pro 作为">
-<meta property="og:type" content="article">
-<meta property="og:title" content="像未来日记中天野雪辉那样记录「無差別日記」">
-<meta property="og:url" content="https://patricorgi.github.io/2017/03/12/%E5%83%8F%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%AE%B0%E4%B8%AD%E5%A4%A9%E9%87%8E%E9%9B%AA%E8%BE%89%E9%82%A3%E6%A0%B7%E8%AE%B0%E5%BD%95%E3%80%8C%E7%84%A1%E5%B7%AE%E5%88%A5%E6%97%A5%E8%A8%98/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Keyboard Maestro下用JavaScript来实现网页交互自动化">
+<meta property="og:url" content="https://patricorgi.github.io/2021/01/18/Keyboard-Maestro%E4%B8%8B%E7%94%A8JavaScript%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E4%BA%A4%E4%BA%92%E8%87%AA%E5%8A%A8%E5%8C%96/index.html">
 <meta property="og:site_name" content="Patrick&#39;s Blog">
-<meta property="og:description" content="其实这是一个小小的 LCP + Drafts + TextExpander 实例，因为微博上有人求方法，我就写一个正式的教程吧。 无差别日记需要用到的 App 有：  Launch Center Pro (LCP) Drafts 4 TextExpander 一个支持 URL Scheme 的笔记应用，比如 Day One（或 Evernote ）  我把 Launch Center Pro 作为">
 <meta property="og:locale">
-<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk4xtr41pj318a0hcdj8.jpg">
-<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk5ers58fj31e818gn4g.jpg">
-<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tNbRwgy1fdk60ihj1tj31kw0xkqc7.jpg">
-<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fdk6gt28nij30x91n4dpq.jpg">
-<meta property="article:published_time" content="2017-03-12T13:46:24.000Z">
-<meta property="article:modified_time" content="2020-12-25T05:09:52.920Z">
+<meta property="article:published_time" content="2021-01-18T20:13:11.000Z">
+<meta property="article:modified_time" content="2021-01-18T20:13:31.898Z">
 <meta property="article:author" content="P. Wu">
-<meta property="article:tag" content="软件">
-<meta property="article:tag" content="iOS">
-<meta property="article:tag" content="流水账">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="Keyboard Maestro">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk4xtr41pj318a0hcdj8.jpg">
 
-<link rel="canonical" href="https://patricorgi.github.io/2017/03/12/%E5%83%8F%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%AE%B0%E4%B8%AD%E5%A4%A9%E9%87%8E%E9%9B%AA%E8%BE%89%E9%82%A3%E6%A0%B7%E8%AE%B0%E5%BD%95%E3%80%8C%E7%84%A1%E5%B7%AE%E5%88%A5%E6%97%A5%E8%A8%98/">
+<link rel="canonical" href="https://patricorgi.github.io/2021/01/18/Keyboard-Maestro%E4%B8%8B%E7%94%A8JavaScript%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E4%BA%A4%E4%BA%92%E8%87%AA%E5%8A%A8%E5%8C%96/">
 
 
 <script id="page-configurations">
@@ -53,7 +46,7 @@
   };
 </script>
 
-  <title>像未来日记中天野雪辉那样记录「無差別日記」 | Patrick's Blog</title>
+  <title>Keyboard Maestro下用JavaScript来实现网页交互自动化 | Patrick's Blog</title>
   
 
 
@@ -158,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2017/03/12/%E5%83%8F%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%AE%B0%E4%B8%AD%E5%A4%A9%E9%87%8E%E9%9B%AA%E8%BE%89%E9%82%A3%E6%A0%B7%E8%AE%B0%E5%BD%95%E3%80%8C%E7%84%A1%E5%B7%AE%E5%88%A5%E6%97%A5%E8%A8%98/">
+    <link itemprop="mainEntityOfPage" href="https://patricorgi.github.io/2021/01/18/Keyboard-Maestro%E4%B8%8B%E7%94%A8JavaScript%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E4%BA%A4%E4%BA%92%E8%87%AA%E5%8A%A8%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -171,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          像未来日记中天野雪辉那样记录「無差別日記」
+          Keyboard Maestro下用JavaScript来实现网页交互自动化
         </h1>
 
         <div class="post-meta">
@@ -180,16 +173,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2017-03-12 09:46:24" itemprop="dateCreated datePublished" datetime="2017-03-12T09:46:24-04:00">2017-03-12</time>
+              <time title="创建时间：2021-01-18 15:13:11 / 修改时间：15:13:31" itemprop="dateCreated datePublished" datetime="2021-01-18T15:13:11-05:00">2021-01-18</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-25 00:09:52" itemprop="dateModified" datetime="2020-12-25T00:09:52-05:00">2020-12-25</time>
-              </span>
 
           
 
@@ -202,51 +189,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>其实这是一个小小的 LCP + Drafts + TextExpander 实例，因为微博上有人求方法，我就写一个正式的教程吧。</p>
-<p>无差别日记需要用到的 App 有：</p>
-<ul>
-<li>Launch Center Pro (LCP)</li>
-<li>Drafts 4</li>
-<li>TextExpander</li>
-<li>一个支持 URL Scheme 的笔记应用，比如 Day One（或 Evernote ）</li>
-</ul>
-<p>我把 Launch Center Pro 作为书写和提交「無差別日記」的入口，我设想你需要以天野雪辉那样丧心病狂的记录频率来记录周围发生的无差别事件，然后以「天」为单位提交一整天记录的内容到日记应用 Day One 中。所以一天下来的「無差別日記」记录流程基本上是这样的：  </p>
-<p><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk4xtr41pj318a0hcdj8.jpg"></p>
-<h2 id="记录無差別事件"><a href="#记录無差別事件" class="headerlink" title="记录無差別事件"></a>记录無差別事件</h2><p>Drafts 是作为暂存区的存在。我们要先钦定一条专门用于录入無差別事件的 Draft。首先需要取得 Draft 的 UUID 码，UUID 相当于 Draft 的身份证号码，只有通过它 LCP 才能直到你需要往哪一条 Draft 里录入信息。</p>
-<p>你可以运行 <a target="_blank" rel="noopener" href="http://drafts4-actions.agiletortoise.com/a/13V">Copy UUID</a> 这个 Action 来复制一条 Draft 的 UUID 码。</p>
-<p>之后我们需要利用 TextExpander 来生成时间信息，我用下面这个 TE Snippet 来生成当前时间，缩写为 ttime，在 LCP 中使用 <code>[textexpander:ttime]</code> tag 来使用它。</p>
-<p><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fdk5ers58fj31e818gn4g.jpg"></p>
-<p>得到 UUID 和并在 TextExpander 里添加了时间 Snippet 之后，我们打开 LCP，先在设置中同步一下 TextExpander 的 Snippets。然后新建一个 Action，在 Action Composer 里搜索到 Drafts 4，然后选择 Append to Draft and Return 这个预置 Action，之后依次填入</p>
-<ul>
-<li>Name: 無差別日記</li>
-<li>UUID: 你复制到的 UUID</li>
-<li>Text:<code>[textexpander:ttime]</code> <code>[prompt: 無差別事件]</code> </li>
-<li>Action:</li>
-</ul>
-<h2 id="提交一整天记录的事件"><a href="#提交一整天记录的事件" class="headerlink" title="提交一整天记录的事件"></a>提交一整天记录的事件</h2><p>我在 Drafts 4 里创建了这样一个 Action：</p>
-<ul>
-<li><p>Step 1: 将 Draft 内容复制到剪贴板</p>
-</li>
-<li><p>Step 2: 利用一个脚本来清空当前 Draft 内容，脚本内容</p>
-<p>  // Script steps run short Javascripts<br>  // For documentation and examples, visit:<br>  // <a target="_blank" rel="noopener" href="http://help.agiletortoise.com/">http://help.agiletortoise.com</a></p>
-<p>  draft.content = “”;<br>  commit(draft);</p>
-</li>
-<li><p>Step 3: 用 Day One 提供的 URL Scheme 从剪贴板创建新日志</p>
-</li>
-</ul>
-<p><img src="https://ww4.sinaimg.cn/large/006tNbRwgy1fdk60ihj1tj31kw0xkqc7.jpg"></p>
-<p>然后将此 Draft Action 命名为「无差别日记」</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fdk6gt28nij30x91n4dpq.jpg"></p>
-<p>为了保证第二天能够继续使用这条被钦定的 Draft，我们必须要删除当天记录到 Draft 中的内容，所以需要清空它。</p>
-<p>于是在 LCP 中创建一个新的 Action，在 Action Composer 中使用 Drafts 4 预置的 Open Draft，然后填好以下三条 Option 即可</p>
-<ul>
-<li>Name: 提交無差別日記</li>
-<li>UUID: 你之前复制的那条 Draft 的 UUID</li>
-<li>Action: 无差别日记</li>
-</ul>
-<p>如果需要你还可以给这个 Action 加一个 Schedule，让它每天固定时间提醒你提交当天记录的内容。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>通过这两个 LCP Action 你可以方便地记录无差别事件，然后每天睡前提交到日记应用中就可以了。这样你就可以走上成神之路了，加油吧少年(ง •_•)ง</p>
-
+        
     </div>
 
     
@@ -255,9 +198,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
-              <a href="/tags/iOS/" rel="tag"># iOS</a>
-              <a href="/tags/%E6%B5%81%E6%B0%B4%E8%B4%A6/" rel="tag"># 流水账</a>
+              <a href="/tags/macOS/" rel="tag"># macOS</a>
+              <a href="/tags/Keyboard-Maestro/" rel="tag"># Keyboard Maestro</a>
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           </div>
 
         
@@ -266,12 +209,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2016/12/02/Snappy%EF%BC%9A%E5%8D%A1%E7%89%87%E5%BC%8F%E6%88%AA%E5%B1%8F%E5%B7%A5%E5%85%B7/" rel="prev" title="Snappy：卡片式截屏工具">
-      <i class="fa fa-chevron-left"></i> Snappy：卡片式截屏工具
+    <a href="/2020/12/25/%E5%9C%A8Day%20One%E8%AE%B0%E5%BD%95%E6%B5%81%E6%B0%B4%E8%B4%A6/" rel="prev" title="在Day One里记流水账">
+      <i class="fa fa-chevron-left"></i> 在Day One里记流水账
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/12/25/%E5%9C%A8Day%20One%E8%AE%B0%E5%BD%95%E6%B5%81%E6%B0%B4%E8%B4%A6/" rel="next" title="在Day One里记流水账">
-      在Day One里记流水账 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/02/18/Alfred%E7%9A%84Script%20Filter%E8%AF%A6%E8%A7%A3/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -331,7 +274,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E7%84%A1%E5%B7%AE%E5%88%A5%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">记录無差別事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E4%B8%80%E6%95%B4%E5%A4%A9%E8%AE%B0%E5%BD%95%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">提交一整天记录的事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
